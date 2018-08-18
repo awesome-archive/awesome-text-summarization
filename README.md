@@ -4,6 +4,23 @@
 
 A curated list of resources dedicated to text summarization
 
+## Table of Contents
+
+* [Corpus](#corpus)
+* [Text Summarization Software](#text-summarization-software)
+* [Word Representations](#word-representations)
+  * [Word Representations for Chinese](#word-representations-for-chinese)
+  * [Evaluation of Word Embeddings](#evaluation-of-word-embeddings)
+  * [Evaluation of Word Embeddings for Chinese](#evaluation-of-word-embeddings-for-chinese)
+* [Sentence Representations](#sentence-representations)
+  * [Evaluation of Sentence Embeddings](#evaluation-of-sentence-embeddings)
+* [Extractive Text Summarization](#extractive-text-summarization)
+* [Abstractive Text Summarization](#abstractive-text-summarization)
+* [Text Summarization](#text-summarization)
+* [Chinese Text Summarization](#chinese-text-summarization)
+* [Evaluation Metrics](#evaluation-metrics)
+* [Opinion Summarization](#opinion-summarization)
+
 ## Contents
 
 ### Corpus
@@ -27,6 +44,7 @@ in Chinese. It is written in Python.
 4. [snownlp](https://github.com/isnowfy/snownlp) is python library for processing Chinese text.
 5. [PKUSUMSUM](https://github.com/PKULCWM/PKUSUMSUM) is an integrated toolkit for automatic document summarization. It supports single-document, multi-document and topic-focused multi-document summarizations, and a variety of summarization methods have been implemented in the toolkit. It supports Western languages (e.g. English) and Chinese language.
 6. [fnlp](https://github.com/FudanNLP/fnlp) is a toolkit for Chinese natural language processing.
+7. [fairseq](https://github.com/pytorch/fairseq) is a sequence modeling toolkit that allows researchers and developers to train custom models for translation, summarization, language modeling and other text generation tasks. It provides reference implementations of various sequence-to-sequence model.
 
 ### Word Representations
 
@@ -78,16 +96,38 @@ in Chinese. It is written in Python.
     * A PyTorch implementation of the MT-LSTM/CoVe is [cove](https://github.com/salesforce/cove).
 20. Maria Pelevina, Nikolay Arefyev, Chris Biemann, Alexander Panchenko. [Making Sense of Word Embeddings](https://arxiv.org/abs/1708.03390). arXiv:1708.03390, 2017. The source code written in Python is [sensegram](https://github.com/tudarmstadt-lt/sensegram).
     - Making sense embedding out of word embeddings using graph-based word sense induction.
-21. Piotr Bojanowski, Edouard Grave, Armand Joulin, Tomas Mikolov. [Enriching Word Vectors with Subword Information](https://arxiv.org/abs/1607.04606). arXiv:1607.04606. 2017. The souce code in C++11 is [fastText](https://github.com/facebookresearch/fastText), which is a library for efficient learning of word representations and sentence classification.
+21. Piotr Bojanowski, Edouard Grave, Armand Joulin, Tomas Mikolov. [Enriching Word Vectors with Subword Information](https://arxiv.org/abs/1607.04606v2). arXiv:1607.04606v2, 2017. The souce code in C++11 is [fastText](https://fasttext.cc/), which is a library for efficient learning of word representations and sentence classification.
+    * They propose a new approach based on the skipgram model, where each word is represented as a bag of character n-grams. A vector representation is associated to each character n-gram; words being represented as the sum of these representations. 
 22. Alexis Conneau, Guillaume Lample, Marc'Aurelio Ranzato, Ludovic Denoyer and Herv{\'e} J{\'e}gou. [Word Translation Without Parallel Data](https://arxiv.org/abs/1710.04087). arXiv:1710.04087, 2017. The source code in Python is [MUSE](https://github.com/facebookresearch/MUSE), which is a library for multilingual unsupervised or supervised word embeddings.
 23. Gabriel Grand, Idan Asher Blank, Francisco Pereira, Evelina Fedorenko. [Semantic projection: recovering human knowledge of multiple, distinct object features from word embeddings](https://arxiv.org/abs/1802.01241v2). arXiv:1802.01241, 2018.
     * Could context-dependent relationships be recovered from word embeddings? To address this issue, they introduce a powerful, domain-general solution: "semantic projection" of word-vectors onto lines that represent various object features, like size (the line extending from the word "small" to "big"), intelligence (from "dumb" to "smart"), or danger (from "safe" to "dangerous").
 24. Matthew E. Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark, Kenton Lee, Luke Zettlemoyer. [Deep contextualized word representations](https://arxiv.org/abs/1802.05365). arXiv:1802.05365, NAACL 2018. The code is [ELMo](https://allennlp.org/elmo).
 25. Edouard Grave, Piotr Bojanowski, Prakhar Gupta, Armand Joulin, Tomas Mikolov. [Learning Word Vectors for 157 Languages](https://arxiv.org/abs/1802.06893v2). arXiv:1802.06893v2, Proceedings of LREC, 2018.
+    * They describe how high quality word representations for 157 languages are trained. They used two sources of data to train these models: the free online encyclopedia Wikipedia and data from the common crawl project. Pre-trained word vectors for 157 languages are [available](https://fasttext.cc/docs/en/crawl-vectors.html).
 26. Douwe Kiela, Changhan Wang and Kyunghyun Cho. [Context-Attentive Embeddings for Improved Sentence Representations](https://arxiv.org/abs/1804.07983). arXiv:1804.07983, 2018. 
     * While one of the first steps in many NLP systems is selecting what embeddings to use, they argue that such a step is better left for neural networks to figure out by themselves. To that end, they introduce a novel, straightforward yet highly effective method for combining multiple types of word embeddings in a single model, leading to state-of-the-art performance within the same model class on a variety of tasks.
 27. Laura Wendlandt, Jonathan K. Kummerfeld, Rada Mihalcea. [Factors Influencing the Surprising Instability of Word Embeddings](https://arxiv.org/abs/1804.09692v1). arXiv:1804.09692, NAACL HLT 2018.
     * They provide empirical evidence for how various factors contribute to the stability of word embeddings, and analyze the effects of stability on downstream tasks.
+
+#### Word Representations for Chinese
+
+1. X. Chen, L.  Xu, Z.  Liu, M. Sun and H. Luan. [Joint Learning of Character and Word Embeddings](http://nlp.csai.tsinghua.edu.cn/~lzy/publications/ijcai2015_character.pdf). IJCAI, 2015. The source code in C is [CWE](https://github.com/Leonard-Xu/CWE).
+2. Jian Xu, Jiawei Liu, Liangang Zhang, Zhengyu Li, Huanhuan Chen. [Improve Chinese Word Embeddings by Exploiting Internal Structure](http://www.aclweb.org/anthology/N16-1119). NAACL 2016. The source code in C is [SCWE](https://github.com/JianXu123/SCWE).
+3. Jinxing Yu, Xun Jian, Hao Xin and Yangqiu Song. [Joint Embeddings of Chinese Words, Characters, and Fine-grained Subcharacter Components](http://www.cse.ust.hk/~yqsong/papers/2017-EMNLP-ChineseEmbedding.pdf). EMNLP, 2017. The source code in C is [JWE](https://github.com/HKUST-KnowComp/JWE).
+4. Shaosheng Cao and Wei Lu. [Improving Word Embeddings with Convolutional Feature Learning and Subword Information](https://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/viewPDFInterstitial/14724/14187). AAAI, 2017. The source code in C# is [IWE](https://github.com/ShelsonCao/IWE).
+5. Zhe Zhao, Tao Liu, Shen Li, Bofang Li and Xiaoyong Du. [Ngram2vec: Learning Improved Word Representations from Ngram Co-occurrence Statistics](http://aclweb.org/anthology/D17-1023).  EMNLP, 2017. The source code in Python is [ngram2vec](https://github.com/zhezhaoa/ngram2vec).
+6. Shaosheng Cao, Wei Lu, Jun Zhou, Xiaolong Li. [cw2vec: Learning Chinese Word Embeddings with Stroke n-gram Information](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/17444). AAAI, 2018. The source code in C++ is [cw2vec](https://github.com/bamtercelboo/cw2vec). 
+
+#### Evaluation of Word Embeddings
+
+1. Tobias Schnabel, Igor Labutov, David Mimno and Thorsten Joachims. [Evaluation methods for unsupervised word embeddings](https://www.cs.cornell.edu/~schnabts/downloads/schnabel2015embeddings.pdf). EMNLP, 2015. The slides are [here](https://www.cs.cornell.edu/~schnabts/downloads/slides/schnabel2015eval.pdf).
+2. Stanisław Jastrzebski, Damian Leśniak, Wojciech Marian Czarnecki. [How to evaluate word embeddings? On importance of data efficiency and simple supervised tasks](https://arxiv.org/abs/1702.02170). arXiv:1702.02170, 2017. The source code in Python is [word-embeddings-benchmarks](https://github.com/kudkudak/word-embeddings-benchmarks).
+3. Amir Bakarov. [A Survey of Word Embeddings Evaluation Methods](https://arxiv.org/abs/1801.09536). arXiv:1801.09536, 2018.
+
+#### Evaluation of Word Embeddings for Chinese
+
+1. Shen Li, Zhe Zhao, Renfen Hu, Wensi Li, Tao Liu, Xiaoyong Du. [Analogical Reasoning on Chinese Morphological and Semantic Relations](https://arxiv.org/abs/1805.06504). arXiv:1805.06504, ACL, 2018. 
+   * The project [Chinese-Word-Vectors](https://github.com/Embedding/Chinese-Word-Vectors) provides 100+ Chinese Word Embeddings trained with different representations (dense and sparse), context features (word, ngram, character, and more), and corpora. Moreover, it provides a Chinese analogical reasoning dataset CA8 and an evaluation toolkit for users to evaluate the quality of their word vectors.
 
 ### Sentence Representations
 
@@ -98,13 +138,26 @@ in Chinese. It is written in Python.
 2. John Wieting and Mohit Bansal and Kevin Gimpel and Karen Livescu. [Towards Universal Paraphrastic Sentence Embeddings](https://arxiv.org/abs/1511.08198). arXiv:1511.08198, ICLR 2016. The source code written in Python is [iclr2016](https://github.com/jwieting/iclr2016).
 2. Zhe Gan, Yunchen Pu, Ricardo Henao, Chunyuan Li, Xiaodong He, Lawrence Carin. [Learning Generic Sentence Representations Using Convolutional Neural Networks](https://arxiv.org/abs/1611.07897). arXiv:1611.07897, EMNLP 2017. The training code written in Python is [ConvSent](https://github.com/zhegan27/ConvSent).
 3. Matteo Pagliardini, Prakhar Gupta, Martin Jaggi. [Unsupervised Learning of Sentence Embeddings using Compositional n-Gram Features](https://arxiv.org/abs/1703.02507v2). arXiv:1703.02507, NAACL 2018. The source code in Python is [sent2vec](https://github.com/epfml/sent2vec). 
-1. Ledell Wu, Adam Fisch, Sumit Chopra, Keith Adams, Antoine Bordes, Jason Weston. [StarSpace: Embed All The Things](https://arxiv.org/abs/1709.03856). arXiv:1709.03856, 2017. The source code in C++11 is [StarSpace](https://github.com/facebookresearch/Starspace/).
-2. Alexis Conneau, Douwe Kiela, Holger Schwenk, Loic Barrault, Antoine Bordes. [Supervised Learning of Universal Sentence Representations from Natural Language Inference Data](https://arxiv.org/abs/1705.02364). arXiv:1705.02364v4, EMNLP 2017. The source code in Python is [InferSent](https://github.com/facebookresearch/InferSent).
-3. Sanjeev Arora, Yingyu Liang, Tengyu Ma. [A Simple but Tough-to-Beat Baseline for Sentence Embeddings](https://openreview.net/pdf?id=SyK00v5xx). ICLR 2017. The source code written in Python is [SIF](https://github.com/PrincetonML/SIF). [SIF_mini_demo](https://github.com/PrincetonML/SIF_mini_demo) is a minimum example for the sentence embedding algorithm.
+1. Ledell Wu, Adam Fisch, Sumit Chopra, Keith Adams, Antoine Bordes, Jason Weston. [StarSpace: Embed All The Things](https://arxiv.org/abs/1709.03856v5). arXiv:1709.03856v5, 2017. The source code in C++11 is [StarSpace](https://github.com/facebookresearch/Starspace/).
+2. Alexis Conneau, Douwe Kiela, Holger Schwenk, Loic Barrault, Antoine Bordes. [Supervised Learning of Universal Sentence Representations from Natural Language Inference Data](https://arxiv.org/abs/1705.02364v5). arXiv:1705.02364v5, EMNLP 2017. The source code in Python is [InferSent](https://github.com/facebookresearch/InferSent).
+3. Sanjeev Arora, Yingyu Liang, Tengyu Ma. [A Simple but Tough-to-Beat Baseline for Sentence Embeddings](https://openreview.net/pdf?id=SyK00v5xx). ICLR 2017. The source code written in Python is [SIF](https://github.com/PrincetonML/SIF). [SIF_mini_demo](https://github.com/PrincetonML/SIF_mini_demo) is a minimum example for the sentence embedding algorithm. [sentence2vec](https://github.com/peter3125/sentence2vec) is another implementation.
 1. Yixin Nie, Mohit Bansal. [Shortcut-Stacked Sentence Encoders for Multi-Domain Inference](https://arxiv.org/abs/1708.02312). arXiv:1708.02312, EMNLP 2017. The source code in Python is [multiNLI_encoder](https://github.com/easonnie/multiNLI_encoder). The new repo [ResEncoder]( https://github.com/easonnie/ResEncoder) is for Residual-connected sentence encoder for NLI.
+2. Allen Nie, Erin D. Bennett, Noah D. Goodman. [DisSent: Sentence Representation Learning from Explicit Discourse Relations](https://arxiv.org/abs/1710.04334v2). arXiv:1710.04334v2, 2018.
 2. Lajanugen Logeswaran, Honglak Lee. [An efficient framework for learning sentence representations](https://arxiv.org/abs/1803.02893). arXiv:1803.02893, ICLR 2018. The open review comments are listed [here](https://openreview.net/forum?id=rJvJXZb0W).
 3. Eric Zelikman. [Context is Everything: Finding Meaning Statistically in Semantic Spaces](https://arxiv.org/abs/1803.08493). arXiv:1803.08493, 2018.
-1. Daniel Cer, Yinfei Yang, Sheng-yi Kong, Nan Hua, Nicole Limtiaco, Rhomni St. John, Noah Constant, Mario Guajardo-Cespedes, Steve Yuan, Chris Tar, Yun-Hsuan Sung, Brian Strope, Ray Kurzweil. [Universal Sentence Encoder](https://arxiv.org/abs/1803.11175). arXiv:1803.11175v2, 2018.
+1. Daniel Cer, Yinfei Yang, Sheng-yi Kong, Nan Hua, Nicole Limtiaco, Rhomni St. John, Noah Constant, Mario Guajardo-Cespedes, Steve Yuan, Chris Tar, Yun-Hsuan Sung, Brian Strope, Ray Kurzweil. [Universal Sentence Encoder](https://arxiv.org/abs/1803.11175v2). arXiv:1803.11175v2, 2018.
+2. Sandeep Subramanian, Adam Trischler, Yoshua Bengio, Christopher J Pal. [Learning General Purpose Distributed Sentence Representations via Large Scale Multi-task Learning](https://arxiv.org/abs/1804.00079). arXiv:1804.00079, ICLR 2018.
+3. [LASER](https://github.com/facebookresearch/LASER) is a library to calculate multilingual sentence embeddings:
+   * Holger Schwenk and Matthijs Douze. [Learning Joint Multilingual Sentence Representations with Neural Machine Translation](https://aclanthology.info/papers/W17-2619/w17-2619). ACL workshop on Representation Learning for NLP, 2017.
+   * Holger Schwenk and Xian Li. [A Corpus for Multilingual Document Classification in Eight Languages](http://www.lrec-conf.org/proceedings/lrec2018/pdf/658.pdf).  LREC, 2018.
+   * Holger Schwenk. [Filtering and Mining Parallel Data in a Joint Multilingual Space](https://arxiv.org/abs/1805.09822). arXiv:1805.09822, ACL, 2018.
+
+#### Evaluation of Sentence Embeddings
+
+1. ossi Adi, Einat Kermany, Yonatan Belinkov, Ofer Lavi, Yoav Goldberg. [Fine-grained Analysis of Sentence Embeddings Using Auxiliary Prediction Tasks](https://arxiv.org/abs/1608.04207v3). arXiv:1608.04207v3, 2017.
+2. Alexis Conneau, Douwe Kiela. [SentEval: An Evaluation Toolkit for Universal Sentence Representations](https://arxiv.org/abs/1803.05449). arXiv:1803.05449, LREC 2018. The source code in Python is [SentEval](https://github.com/facebookresearch/SentEval).
+3. Alex Wang, Amapreet Singh, Julian Michael, Felix Hill, Omer Levy, Samuel R. Bowman. [GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding](https://arxiv.org/abs/1804.07461). arXiv:1804.07461, 2018.
+4. Alexis Conneau, German Kruszewski, Guillaume Lample, Loïc Barrault, Marco Baroni. [What you can cram into a single vector: Probing sentence embeddings for linguistic properties](https://arxiv.org/abs/1805.01070v2). arXiv:1805.01070v2, 2018.
 
 ### Extractive Text Summarization
 
@@ -304,3 +357,4 @@ Co-Occurrence Statistics](https://www.microsoft.com/en-us/research/wp-content/up
 5. Ahmad Kamal. [Review Mining for Feature Based Opinion Summarization and Visualization](https://arxiv.org/abs/1504.03068v2). arXiv:1504.03068, 2015.
 6. Haibing Wu, Yiwei Gu, Shangdi Sun and Xiaodong Gu. [Aspect-based Opinion Summarization with Convolutional Neural Networks](https://arxiv.org/abs/1511.09128). 2015.
 7. Lu Wang, Hema Raghavan, Claire Cardie, Vittorio Castelli. [Query-Focused Opinion Summarization for User-Generated Content](https://arxiv.org/abs/1606.05702v1). arXiv:1606.05702, 2016.
+
