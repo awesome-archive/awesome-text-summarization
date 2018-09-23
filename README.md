@@ -26,13 +26,19 @@ A curated list of resources dedicated to text summarization
 ### Corpus
 
 1. [Opinosis dataset](http://kavita-ganesan.com/opinosis-opinion-dataset) contains 51 articles. Each article is about a product’s feature, like iPod’s Battery Life, etc. and is a collection of reviews by customers who purchased that product. Each article in the dataset has 5 manually written “gold” summaries. Usually the 5 gold summaries are different but they can also be the same text repeated 5 times.
-2. [DUC](http://duc.nist.gov/)
+2. [Past DUC Data](https://www-nlpir.nist.gov/projects/duc/data.html) and [TAC Data](https://tac.nist.gov/data/index.html) include summarization data.
 3. [English Gigaword](https://catalog.ldc.upenn.edu/LDC2003T05): English Gigaword was produced by Linguistic Data Consortium (LDC).
-6. [Large Scale Chinese Short Text Summarization Dataset（LCSTS）](http://icrc.hitsz.edu.cn/Article/show/139.html): This corpus is constructed from the Chinese microblogging website SinaWeibo. It consists of over 2 million real Chinese short texts with short summaries given by the writer of each text.
-7. Ziqiang Cao, Chengyao Chen, Wenjie Li, Sujian Li, Furu Wei, Ming Zhou. [TGSum: Build Tweet Guided Multi-Document Summarization Dataset](https://arxiv.org/abs/1511.08417v1). arXiv:1511.08417, 2015.
-9. [scisumm-corpus](https://github.com/WING-NUS/scisumm-corpus) contains a release of the scientific document summarization corpus and annotations from the WING NUS group.
-12. Avinesh P.V.S., Maxime Peyrard, Christian M. Meyer. [Live Blog Corpus for Summarization](https://arxiv.org/abs/1802.09884v1). arXiv:1802.09884, 2018.
-13. Alexander R. Fabbri, Irene Li, Prawat Trairatvorakul, Yijiao He, Wei Tai Ting, Robert Tung, Caitlin Westerfield, Dragomir R. Radev.[TutorialBank: A Manually-Collected Corpus for Prerequisite Chains, Survey Extraction and Resource Recommendation](https://arxiv.org/abs/1805.04617). arXiv:1805.04617, 2018. The source code is [TutorialBank](https://github.com/Yale-LILY/TutorialBank). All the datasets could be found through the [search engine](http://tangra.cs.yale.edu/newaan/). The blog [TutorialBank: Learning NLP Made Easier](https://alex-fabbri.github.io/TutorialBank/) is an excellent user guide with step by step instructions on how to use the search engine.
+4. [Large Scale Chinese Short Text Summarization Dataset (LCSTS)](http://icrc.hitsz.edu.cn/Article/show/139.html): This corpus is constructed from the Chinese microblogging website SinaWeibo. It consists of over 2 million real Chinese short texts with short summaries given by the writer of each text.
+5. Ziqiang Cao, Chengyao Chen, Wenjie Li, Sujian Li, Furu Wei, Ming Zhou. [TGSum: Build Tweet Guided Multi-Document Summarization Dataset](https://arxiv.org/abs/1511.08417v1). arXiv:1511.08417, 2015.
+6. [scisumm-corpus](https://github.com/WING-NUS/scisumm-corpus) contains a release of the scientific document summarization corpus and annotations from the WING NUS group.
+7. Avinesh P.V.S., Maxime Peyrard, Christian M. Meyer. [Live Blog Corpus for Summarization](https://arxiv.org/abs/1802.09884v1). arXiv:1802.09884, 2018.
+8. Alexander R. Fabbri, Irene Li, Prawat Trairatvorakul, Yijiao He, Wei Tai Ting, Robert Tung, Caitlin Westerfield, Dragomir R. Radev.[TutorialBank: A Manually-Collected Corpus for Prerequisite Chains, Survey Extraction and Resource Recommendation](https://arxiv.org/abs/1805.04617). arXiv:1805.04617, 2018. The source code is [TutorialBank](https://github.com/Yale-LILY/TutorialBank). All the datasets could be found through the [search engine](http://tangra.cs.yale.edu/newaan/). The blog [TutorialBank: Learning NLP Made Easier](https://alex-fabbri.github.io/TutorialBank/) is an excellent user guide with step by step instructions on how to use the search engine.
+9. [Legal Case Reports Data Set](https://archive.ics.uci.edu/ml/datasets/Legal+Case+Reports) contains Australian legal cases from the Federal Court of Australia (FCA).
+10. [TIPSTER Text Summarization Evaluation Conference (SUMMAC)](https://www-nlpir.nist.gov/related_projects/tipster_summac/cmp_lg.html)  includes 183 documents.
+11. [NEWS SUMMARY](https://www.kaggle.com/sunnysai12345/news-summary) consists of 4515 examples.
+12. [BBC News Summary](https://www.kaggle.com/pariza/bbc-news-summary/data) consists of 417 political news articles of BBC from 2004 to 2005.
+13. CNN / Daily Mail dataset (non-anonymized) for summarization is produced by the code [cnn-dailymail](https://github.com/abisee/cnn-dailymail).
+14. [sentence-compression](https://github.com/google-research-datasets/sentence-compression) is a large corpus of uncompressed and compressed sentences from news articles. The algorithm to collect the data is described here: [Overcoming the Lack of Parallel Data in Sentence Compression](http://www.aclweb.org/anthology/D/D13/D13-1155.pdf) by Katja Filippova and Yasemin Altun, EMNLP '13.
 
 
 ### Text Summarization Software
@@ -108,6 +114,7 @@ in Chinese. It is written in Python.
     * While one of the first steps in many NLP systems is selecting what embeddings to use, they argue that such a step is better left for neural networks to figure out by themselves. To that end, they introduce a novel, straightforward yet highly effective method for combining multiple types of word embeddings in a single model, leading to state-of-the-art performance within the same model class on a variety of tasks.
 27. Laura Wendlandt, Jonathan K. Kummerfeld, Rada Mihalcea. [Factors Influencing the Surprising Instability of Word Embeddings](https://arxiv.org/abs/1804.09692v1). arXiv:1804.09692, NAACL HLT 2018.
     * They provide empirical evidence for how various factors contribute to the stability of word embeddings, and analyze the effects of stability on downstream tasks.
+28. [magnitude](https://github.com/plasticityai/magnitude) is a feature-packed Python package and vector storage file format for utilizing vector embeddings in machine learning models in a fast, efficient, and simple manner.
 
 #### Word Representations for Chinese
 
@@ -201,8 +208,10 @@ in Chinese. It is written in Python.
 Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.fosteropenscience.eu/sites/default/files/pdf/2932.pdf) are also available.
 16. Vahed Qazvinian, Dragomir R. Radev, Saif M. Mohammad, Bonnie Dorr, David Zajic, Michael Whidby, Taesun Moon. [Generating Extractive Summaries of Scientific Paradigms](https://arxiv.org/abs/1402.0556v1). arXiv:1402.0556, 2014.
 17. Kågebäck, Mikael, et al. [Extractive summarization using continuous vector space models](http://www.aclweb.org/anthology/W14-1504). Proceedings of the 2nd Workshop on Continuous Vector Space Models and their Compositionality (CVSC)@ EACL. 2014.
+18. Katja Filippova, Enrique Alfonseca, Carlos A. Colmenares, Lukasz Kaiser, Oriol Vinyals. [Sentence Compression by Deletion with LSTMs](https://static.googleusercontent.com/media/research.google.com/zh-CN//pubs/archive/43852.pdf). EMNLP 2015.
 18. Ramesh Nallapati, Bowen Zhou, Mingbo Ma. [Classify or Select: Neural Architectures for Extractive Document Summarization](https://arxiv.org/abs/1611.04244).  arXiv:1611.04244. 2016.
-19. Ramesh Nallapati, Feifei Zhai, Bowen Zhou. [SummaRuNNer: A Recurrent Neural Network based Sequence Model for Extractive Summarization of Documents](https://arxiv.org/abs/1611.04230). arXiv:1611.04230, AAAI, 2017.
+19. Liangguo Wang, Jing Jiang, Hai Leong Chieu, Chen Hui Ong, Dandan Song, Lejian Liao. [Can Syntax Help? Improving an LSTM-based Sentence Compression Model for New Domains](http://www.aclweb.org/anthology/P17-1127). ACL 2017.
+19. Ramesh Nallapati, Feifei Zhai, Bowen Zhou. [SummaRuNNer: A Recurrent Neural Network based Sequence Model for Extractive Summarization of Documents](https://arxiv.org/abs/1611.04230). arXiv:1611.04230, AAAI 2017.
 20. Shashi Narayan, Nikos Papasarantopoulos, Mirella Lapata, Shay B. Cohen. [Neural Extractive Summarization with Side Information](https://arxiv.org/abs/1704.04530). arXiv:1704.04530, 2017.
 21. Rakesh Verma, Daniel Lee. [Extractive Summarization: Limits, Compression, Generalized Model and Heuristics](https://arxiv.org/abs/1704.05550v1). arXiv:1704.05550, 2017.
 22. Ed Collins, Isabelle Augenstein, Sebastian Riedel. [A Supervised Approach to Extractive Summarisation of Scientific Papers](https://arxiv.org/abs/1706.03946v1). arXiv:1706.03946, 2017.
@@ -211,6 +220,12 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 25. Shashi Narayan, Shay B. Cohen, Mirella Lapata. [Ranking Sentences for Extractive Summarization with Reinforcement Learning](https://arxiv.org/abs/1802.08636v1). arXiv:1802.08636, NAACL, 2018.
 26. Aakash Sinha, Abhishek Yadav, Akshay Gahlot. [Extractive Text Summarization using Neural Networks](https://arxiv.org/abs/1802.10137v1). arXiv:1802.10137, 2018.
 27. Yuxiang Wu, Baotian Hu. [Learning to Extract Coherent Summary via Deep Reinforcement Learning](https://arxiv.org/abs/1804.07036). arXiv:1804.07036, AAAI, 2018.
+28. Tanner A. Bohn, Charles X. Ling. [Neural Sentence Location Prediction for Summarization](https://arxiv.org/abs/1804.08053v1). arXiv:1804.08053, 2018.
+28. Kamal Al-Sabahi, Zhang Zuping, Mohammed Nadher. [A Hierarchical Structured Self-Attentive Model for Extractive Document Summarization (HSSAS)](https://arxiv.org/abs/1805.07799v1). arXiv:1805.07799, IEEE Access, 2018.
+28. Sansiri Tarnpradab, Fei Liu, Kien A. Hua. [Toward Extractive Summarization of Online Forum Discussions via Hierarchical Attention Networks](https://arxiv.org/abs/1805.10390v1). 2018.
+28. Kristjan Arumae, Fei Liu. [Reinforced Extractive Summarization with Question-Focused Rewards](https://arxiv.org/abs/1805.10392v2). arXiv:1805.10392, 2018.
+28. Qingyu Zhou, Nan Yang, Furu Wei, Shaohan Huang, Ming Zhou, Tiejun Zhao. [Neural Document Summarization by Jointly Learning to Score and Select Sentences](https://arxiv.org/abs/1807.02305v1). arXiv:1807.02305, ACL 2018.
+28. Xingxing Zhang, Mirella Lapata, Furu Wei, Ming Zhou. [Neural Latent Extractive Document Summarization](https://arxiv.org/abs/1808.07187v2). arXiv:1808.07187, EMNLP 2018.
 
 ### Abstractive Text Summarization
 
@@ -254,8 +269,26 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 25. Paul Azunre, Craig Corcoran, David Sullivan, Garrett Honke, Rebecca Ruppel, Sandeep Verma, Jonathon Morgan. [Abstractive Tabular Dataset Summarization via Knowledge Base Semantic Embeddings](https://arxiv.org/abs/1804.01503v2). arXiv:1804.01503, 2018.
 26. Arman Cohan, Franck Dernoncourt, Doo Soon Kim, Trung Bui, Seokhwan Kim, Walter Chang, Nazli Goharian. [A Discourse-Aware Attention Model for Abstractive Summarization of Long Documents](https://arxiv.org/abs/1804.05685v1). arXiv:1804.05685, 2018.
 27. Ramakanth Pasunuru, Mohit Bansal. [Multi-Reward Reinforced Summarization with Saliency and Entailment](https://arxiv.org/abs/1804.06451v1). arXiv:1804.06451, 2018.
-28. Shuming Ma, Xu Sun, Junyang Lin, Xuancheng Ren. [A Hierarchical End-to-End Model for Jointly Improving Text Summarization and Sentiment Classification](https://arxiv.org/abs/1805.01089). arXiv:1805.01089, IJCAI 2018.
+28. Jianmin Zhang, Jiwei Tan, Xiaojun Wan. [Towards a Neural Network Approach to Abstractive Multi-Document Summarization](https://arxiv.org/abs/1804.09010v1). arXiv:1804.09010, 2018.
+28. Shuming Ma, Xu Sun, Junyang Lin, Xuancheng Ren. [A Hierarchical End-to-End Model for Jointly Improving Text Summarization and Sentiment Classification](https://arxiv.org/abs/1805.01089v2). arXiv:1805.01089v2, IJCAI 2018.
 28. Li Wang, Junlin Yao, Yunzhe Tao, Li Zhong, Wei Liu, Qiang Du. [A Reinforced Topic-Aware Convolutional Sequence-to-Sequence Model for Abstractive Text Summarization](https://arxiv.org/abs/1805.03616). arXiv:1805.03616, International Joint Conference on Artificial Intelligence and European Conference on Artificial Intelligence (IJCAI-ECAI), 2018.
+29. Junyang Lin, Xu Sun, Shuming Ma, Qi Su. [Global Encoding for Abstractive Summarization](https://arxiv.org/abs/1805.03989v2). arXiv:1805.03989, ACL 2018.
+29. Guokan Shang, Wensi Ding, Zekun Zhang, Antoine J.-P. Tixier, Polykarpos Meladianos, Michalis Vazirgiannis, Jean-Pierre Lorre´. [Unsupervised Abstractive Meeting Summarization with Multi-Sentence Compression and Budgeted Submodular Maximization](https://arxiv.org/abs/1805.05271). arXiv:1805.05271, 2018.
+30. Fei Liu, Jeffrey Flanigan, Sam Thomson, Norman Sadeh, Noah A. Smith. [Toward Abstractive Summarization Using Semantic Representations](https://arxiv.org/abs/1805.10399v1). arXiv:1805.10399, 2018.
+30. Han Guo, Ramakanth Pasunuru, Mohit Bansal. [Soft Layer-Specific Multi-Task Summarization with Entailment and Question Generation](https://arxiv.org/abs/1805.11004v1). arXiv:1805.11004, ACL 2018.
+29. Yen-Chun Chen, Mohit Bansal. [Fast Abstractive Summarization with Reinforce-Selected Sentence Rewriting](https://arxiv.org/abs/1805.11080). arXiv:1805.11080, ACL 2018. The souce code written in Python is [fast_abs_rl](https://github.com/chenrocks/fast_abs_rl).
+30. Reinald Kim Amplayo, Seonjae Lim, Seung-won Hwang. [Entity Commonsense Representation for Neural Abstractive Summarization](https://arxiv.org/abs/1806.05504v1). arXiv:1806.05504, NAACL 2018.
+30. Kaiqiang Song, Lin Zhao, Fei Liu. [Structure-Infused Copy Mechanisms for Abstractive Summarization](https://arxiv.org/abs/1806.05658v2). arXiv:1806.05658, 2018.
+31. Kexin Liao, Logan Lebanoff, Fei Liu. [Abstract Meaning Representation for Multi-Document Summarization](https://arxiv.org/abs/1806.05655v1). arXiv:1806.05655, 2018.
+30. Shibhansh Dohare, Vivek Gupta and Harish Karnick. [Unsupervised Semantic Abstractive Summarization](http://aclweb.org/anthology/P18-3011). ACL, July 2018.
+31. Niantao Xie, Sujian Li, Huiling Ren, Qibin Zhai. [Abstractive Summarization Improved by WordNet-based Extractive Sentences](https://arxiv.org/abs/1808.01426v1). arXiv:1808.01426, NLPCC 2018.
+31. Wojciech Kryściński, Romain Paulus, Caiming Xiong, Richard Socher. [Improving Abstraction in Text Summarization](https://arxiv.org/abs/1808.07913v1). arXiv:1808.07913, 2018.
+31. Hardy, Andreas Vlachos. [Guided Neural Language Generation for Abstractive Summarization using Abstract Meaning Representation](https://arxiv.org/abs/1808.09160v1). arXiv:1808.09160, EMNLP 2018.
+31. Sebastian Gehrmann, Yuntian Deng, Alexander M. Rush. [Bottom-Up Abstractive Summarization](https://arxiv.org/abs/1808.10792v1). arXiv:1808.10792, 2018.
+31. Yichen Jiang, Mohit Bansal. [Closed-Book Training to Improve Summarization Encoder Memory](https://arxiv.org/abs/1809.04585v1). arXiv:1809.04585, 2018.
+30. Raphael Schumann. [Unsupervised Abstractive Sentence Summarization using Length Controlled Variational Autoencoder](https://arxiv.org/abs/1809.05233). arXiv:1809.05233, 2018.
+31. Kamal Al-Sabahi, Zhang Zuping, Yang Kang. [Bidirectional Attentional Encoder-Decoder Model and Bidirectional Beam Search for Abstractive Summarization](https://arxiv.org/abs/1809.06662v1). arXiv:1809.06662, 2018.
+
 
 ### Text Summarization
 
@@ -284,7 +317,7 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 23. Marta Aparício, Paulo Figueiredo, Francisco Raposo, David Martins de Matos, Ricardo Ribeiro, Luís Marujo. [Summarization of Films and Documentaries Based on Subtitles and Scripts](https://arxiv.org/abs/1506.01273v3). arXiv:1506.01273, 2015.
 24. Luís Marujo, Ricardo Ribeiro, David Martins de Matos, João P. Neto, Anatole Gershman, Jaime Carbonell. [Extending a Single-Document Summarizer to Multi-Document: a Hierarchical Approach](https://arxiv.org/abs/1507.02907v1). arXiv:1507.02907, 2015.
 25. Xiaojun Wan, Yansong Feng and Weiwei Sun. [Automatic Text Generation: Research Progress and Future Trends](http://www.icst.pku.edu.cn/lcwm/wanxj/files/TextGenerationSurvey.pdf). Book Chapter in CCF 2014-2015 Annual Report on Computer Science and Technology in China (In Chinese), 2015.
-    0. Xiaojun Wan, Ziqiang Cao, Furu Wei, Sujian Li, Ming Zhou. [Multi-Document Summarization via Discriminative Summary Reranking](https://arxiv.org/abs/1507.02062v1).     arXiv:1507.02062, 2015.
+26. Xiaojun Wan, Ziqiang Cao, Furu Wei, Sujian Li, Ming Zhou. [Multi-Document Summarization via Discriminative Summary Reranking](https://arxiv.org/abs/1507.02062v1).     arXiv:1507.02062, 2015.
 26. Gulcehre, Caglar, Sungjin Ahn, Ramesh Nallapati, Bowen Zhou, and Yoshua Bengio. [Pointing the Unknown Words](http://arxiv.org/abs/1603.08148). arXiv:1603.08148, 2016.
 27. Jiatao Gu, Zhengdong Lu, Hang Li, Victor O.K. Li. [Incorporating Copying Mechanism in Sequence-to-Sequence Learning](https://arxiv.org/abs/1603.06393). arXiv:1603.06393, ACL, 2016.
     - They addressed an important problem in sequence-to-sequence (Seq2Seq) learning referred to as copying, in which certain segments in the input sequence are selectively replicated in the output sequence. In this paper, they incorporated copying into neural network-based Seq2Seq learning and propose a new model called CopyNet with encoder-decoder structure. CopyNet can nicely integrate the regular way of word generation in the decoder with the new copying mechanism which can choose sub-sequences in the input sequence and put them at proper places in the output sequence.
@@ -305,7 +338,7 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 41. Piji Li, Zihao Wang, Wai Lam, Zhaochun Ren, Lidong Bing.  [Salience Estimation via Variational Auto-Encoders for Multi-Document Summarization](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14613). In AAAI, 2017.
 42. Yinfei Yang, Forrest Sheng Bao, Ani Nenkova. [Detecting (Un)Important Content for Single-Document News Summarization](https://arxiv.org/abs/1702.07998v1). arXiv:1702.07998, 2017.
 43. Rui Meng, Sanqiang Zhao, Shuguang Han, Daqing He, Peter Brusilovsky, Yu Chi. [Deep Keyphrase Generation](https://arxiv.org/abs/1704.06879v1). arXiv:1704.06879, 2017. The source code written in Python is [seq2seq-keyphrase](https://github.com/memray/seq2seq-keyphrase).
-44. Abigail See, Peter J. Liu and Christopher D. Manning. [Get To The Point: Summarization with Pointer-Generator Networks](https://arxiv.org/abs/1704.04368). ACL, 2017.
+44. Abigail See, Peter J. Liu and Christopher D. Manning. [Get To The Point: Summarization with Pointer-Generator Networks](https://arxiv.org/abs/1704.04368). ACL, 2017. The souce code is [pointer-generator](https://github.com/abisee/pointer-generator).
 45. Qingyu Zhou, Nan Yang, Furu Wei and Ming Zhou. [Selective Encoding for Abstractive Sentence Summarization](https://arxiv.org/abs/1704.07073). arXiv:1704.07073, ACL, 2017.
 46. Maxime Peyrard and Judith Eckle-Kohler. [Supervised Learning of Automatic Pyramid for Optimization-Based Multi-Document Summarization](). ACL, 2017.
 47. Jin-ge Yao, Xiaojun Wan and Jianguo Xiao. [Recent Advances in Document Summarization](http://www.icst.pku.edu.cn/lcwm/wanxj/files/summ_survey_draft.pdf). KAIS, survey paper, 2017.
@@ -316,7 +349,7 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 51. Michihiro Yasunaga, Rui Zhang, Kshitijh Meelu, Ayush Pareek, Krishnan Srinivasan, Dragomir Radev. [Graph-based Neural Multi-Document Summarization](https://arxiv.org/abs/1706.06681v3). arXiv:1706.06681, CoNLL, 2017.
 52. Abeed Sarker, Diego Molla, Cecile Paris. [Automated text summarisation and evidence-based medicine: A survey of two domains](https://arxiv.org/abs/1706.08162v1). arXiv:1706.08162, 2017.
 53. Mehdi Allahyari, Seyedamin Pouriyeh, Mehdi Assefi, Saeid Safaei, Elizabeth D. Trippe, Juan B. Gutierrez, Krys Kochut. [Text Summarization Techniques: A Brief Survey](https://arxiv.org/abs/1707.02268). arXiv:1707.02268, 2017.
-    5. Demian Gholipour Ghalandari. [Revisiting the Centroid-based Method: A Strong Baseline for Multi-Document Summarization](https://arxiv.org/abs/1708.07690v1).     arXiv:1708.07690, EMNLP, 2017.
+5. Demian Gholipour Ghalandari. [Revisiting the Centroid-based Method: A Strong Baseline for Multi-Document Summarization](https://arxiv.org/abs/1708.07690v1). arXiv:1708.07690, EMNLP, 2017.
 54. Shuming Ma, Xu Sun. [A Semantic Relevance Based Neural Network for Text Summarization and Text Simplification](https://arxiv.org/abs/1710.02318v1). arXiv:1710.02318, 2017.
 55. Kaustubh Mani, Ishan Verma, Lipika Dey. [Multi-Document Summarization using Distributed Bag-of-Words Model](https://arxiv.org/abs/1710.02745v1). arXiv:1710.02745, 2017.
 56. Liqun Shao, Hao Zhang, Ming Jia, Jie Wang. [Efficient and Effective Single-Document Summarizations and A Word-Embedding Measurement of Quality](https://arxiv.org/abs/1710.00284v1). arXiv:1710.00284, KDIR, 2017.
@@ -325,6 +358,14 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 59. Peter J. Liu, Mohammad Saleh, Etienne Pot, Ben Goodrich, Ryan Sepassi, Lukasz Kaiser, Noam Shazeer. [Generating Wikipedia by Summarizing Long Sequences](https://arxiv.org/abs/1801.10198v1). arXiv:1801.10198, 2018.
 60. Parth Mehta, Prasenjit Majumder. [Content based Weighted Consensus Summarization](https://arxiv.org/abs/1802.00946v1). arXiv:1802.00946, 2018.
 61. Mayank Chaudhari, Aakash Nelson Mattukoyya. [Tone Biased MMR Text Summarization](https://arxiv.org/abs/1802.09426v2). arXiv:1802.09426, 2018.
+62. Divyanshu Daiya, Anukarsh Singh, Mukesh Jadon. [Using Statistical and Semantic Models for Multi-Document Summarization](https://arxiv.org/abs/1805.04579v2). arXiv:1805.04579, 2018.
+62. Wan-Ting Hsu, Chieh-Kai Lin, Ming-Ying Lee, Kerui Min, Jing Tang, Min Sun. [A Unified Model for Extractive and Abstractive Summarization using Inconsistency Loss](https://arxiv.org/abs/1805.06266v2). arXiv:1805.06266, ACL 2018.
+62. Pei Guo, Connor Anderson, Kolten Pearson, Ryan Farrell. [Neural Network Interpretation via Fine Grained Textual Summarization](https://arxiv.org/abs/1805.08969v2). arXiv:1805.08969, 2018.
+63. Kamal Al-Sabahi, Zhang Zuping, Yang Kang. [Latent Semantic Analysis Approach for Document Summarization Based on Word Embeddings](https://arxiv.org/abs/1807.02748v1). arXiv:1807.02748, KSII Transactions on Internet and Information Systems, 2018.
+63. Chandra Khatri, Gyanit Singh, Nish Parikh. [Abstractive and Extractive Text Summarization using Document Context Vector and Recurrent Neural Networks](https://arxiv.org/abs/1807.08000v2). arXiv:1807.08000v2, ACM KDD 2018 Deep Learning Day, 2018.
+63. Logan Lebanoff, Kaiqiang Song, Fei Liu. [Adapting the Neural Encoder-Decoder Framework from Single to Multi-Document Summarization](https://arxiv.org/abs/1808.06218v2). arXiv:1808.06218, 2018.
+64. Shashi Narayan, Shay B. Cohen, Mirella Lapata. [Don't Give Me the Details, Just the Summary! Topic-Aware Convolutional Neural Networks for Extreme Summarization](https://arxiv.org/abs/1808.08745v1). arXiv:1808.08745, 2018.
+62. Parth Mehta, Prasenjit Majumder. [Exploiting local and global performance of candidate systems for aggregation of summarization techniques](https://arxiv.org/abs/1809.02343v1). arXiv:1809.02343, 2018.
 
 ### Chinese Text Summarization
 
