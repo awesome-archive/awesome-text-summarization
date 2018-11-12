@@ -39,6 +39,8 @@ A curated list of resources dedicated to text summarization
 12. [BBC News Summary](https://www.kaggle.com/pariza/bbc-news-summary/data) consists of 417 political news articles of BBC from 2004 to 2005.
 13. CNN / Daily Mail dataset (non-anonymized) for summarization is produced by the code [cnn-dailymail](https://github.com/abisee/cnn-dailymail).
 14. [sentence-compression](https://github.com/google-research-datasets/sentence-compression) is a large corpus of uncompressed and compressed sentences from news articles. The algorithm to collect the data is described here: [Overcoming the Lack of Parallel Data in Sentence Compression](http://www.aclweb.org/anthology/D/D13/D13-1155.pdf) by Katja Filippova and Yasemin Altun, EMNLP '13.
+15. [The Columbia Summarization Corpus (CSC)](https://www.cs.ucsb.edu/~william/papers/ijcnlp2011.pdf) was retrieved from the output of the [Newsblaster online news summarization system](http://newsblaster.cs.columbia.edu/) that crawls the Web for news articles, clusters them on specific topics and produces multidocument summaries for each cluster. They collected a total of 166,435 summaries containing 2.5 million sentences and covering 2,129 days in the 2003-2011 period. Additional references of the Columbia Newsblaster summarizer can be found on the website of [Columbia NLP group publication page](http://www1.cs.columbia.edu/nlp/papers.cgi).
+16. [WikiHow-Dataset](https://github.com/mahnazkoupaee/WikiHow-Dataset)  a new large-scale dataset using the online [WikiHow] (http://www.wikihow.com) knowledge base. Each article consists of multiple paragraphs and each paragraph starts with a sentence summarizing it. By merging the paragraphs to form the article and the paragraph outlines to form the summary, the resulting version of the dataset contains more than 200,000 long-sequence pairs.
 
 
 ### Text Summarization Software
@@ -150,6 +152,7 @@ in Chinese. It is written in Python.
 3. Sanjeev Arora, Yingyu Liang, Tengyu Ma. [A Simple but Tough-to-Beat Baseline for Sentence Embeddings](https://openreview.net/pdf?id=SyK00v5xx). ICLR 2017. The source code written in Python is [SIF](https://github.com/PrincetonML/SIF). [SIF_mini_demo](https://github.com/PrincetonML/SIF_mini_demo) is a minimum example for the sentence embedding algorithm. [sentence2vec](https://github.com/peter3125/sentence2vec) is another implementation.
 1. Yixin Nie, Mohit Bansal. [Shortcut-Stacked Sentence Encoders for Multi-Domain Inference](https://arxiv.org/abs/1708.02312). arXiv:1708.02312, EMNLP 2017. The source code in Python is [multiNLI_encoder](https://github.com/easonnie/multiNLI_encoder). The new repo [ResEncoder]( https://github.com/easonnie/ResEncoder) is for Residual-connected sentence encoder for NLI.
 2. Allen Nie, Erin D. Bennett, Noah D. Goodman. [DisSent: Sentence Representation Learning from Explicit Discourse Relations](https://arxiv.org/abs/1710.04334v2). arXiv:1710.04334v2, 2018.
+3. Andreas Rücklé, Steffen Eger, Maxime Peyrard, Iryna Gurevych. [Concatenated Power Mean Word Embeddings as Universal Cross-Lingual Sentence Representations](https://arxiv.org/abs/1803.01400v2).  arXiv:1803.01400v2, 2018. The source code written in Python is [arxiv2018-xling-sentence-embeddings](https://github.com/UKPLab/arxiv2018-xling-sentence-embeddings).
 2. Lajanugen Logeswaran, Honglak Lee. [An efficient framework for learning sentence representations](https://arxiv.org/abs/1803.02893). arXiv:1803.02893, ICLR 2018. The open review comments are listed [here](https://openreview.net/forum?id=rJvJXZb0W).
 3. Eric Zelikman. [Context is Everything: Finding Meaning Statistically in Semantic Spaces](https://arxiv.org/abs/1803.08493). arXiv:1803.08493, 2018.
 1. Daniel Cer, Yinfei Yang, Sheng-yi Kong, Nan Hua, Nicole Limtiaco, Rhomni St. John, Noah Constant, Mario Guajardo-Cespedes, Steve Yuan, Chris Tar, Yun-Hsuan Sung, Brian Strope, Ray Kurzweil. [Universal Sentence Encoder](https://arxiv.org/abs/1803.11175v2). arXiv:1803.11175v2, 2018.
@@ -288,6 +291,8 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 31. Yichen Jiang, Mohit Bansal. [Closed-Book Training to Improve Summarization Encoder Memory](https://arxiv.org/abs/1809.04585v1). arXiv:1809.04585, 2018.
 30. Raphael Schumann. [Unsupervised Abstractive Sentence Summarization using Length Controlled Variational Autoencoder](https://arxiv.org/abs/1809.05233). arXiv:1809.05233, 2018.
 31. Kamal Al-Sabahi, Zhang Zuping, Yang Kang. [Bidirectional Attentional Encoder-Decoder Model and Bidirectional Beam Search for Abstractive Summarization](https://arxiv.org/abs/1809.06662v1). arXiv:1809.06662, 2018.
+32. Tomonori Kodaira, Mamoru Komachi. [The Rule of Three: Abstractive Text Summarization in Three Bullet Points](https://arxiv.org/abs/1809.10867v1). arXiv:1809.10867, PACLIC 2018, 2018.
+32. Byeongchang Kim, Hyunwoo Kim, Gunhee Kim. [Abstractive Summarization of Reddit Posts with Multi-level Memory Networks](https://arxiv.org/abs/1811.00783). arXiv:1811.00783, 2018. The github project is  [MMN](https://github.com/ctr4si/MMN) including the dataset.
 
 
 ### Text Summarization
@@ -366,6 +371,9 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 63. Logan Lebanoff, Kaiqiang Song, Fei Liu. [Adapting the Neural Encoder-Decoder Framework from Single to Multi-Document Summarization](https://arxiv.org/abs/1808.06218v2). arXiv:1808.06218, 2018.
 64. Shashi Narayan, Shay B. Cohen, Mirella Lapata. [Don't Give Me the Details, Just the Summary! Topic-Aware Convolutional Neural Networks for Extreme Summarization](https://arxiv.org/abs/1808.08745v1). arXiv:1808.08745, 2018.
 62. Parth Mehta, Prasenjit Majumder. [Exploiting local and global performance of candidate systems for aggregation of summarization techniques](https://arxiv.org/abs/1809.02343v1). arXiv:1809.02343, 2018.
+63. Chi Zhang, Shagan Sah, Thang Nguyen, Dheeraj Peri, Alexander Loui, Carl Salvaggio, Raymond Ptucha. [Semantic Sentence Embeddings for Paraphrasing and Text Summarization](https://arxiv.org/abs/1809.10267v1). arXiv:1809.10267, IEEE GlobalSIP 2017 Conference, 2018.
+64. Yaser Keneshloo, Naren Ramakrishnan, Chandan K. Reddy. [Deep Transfer Reinforcement Learning for Text Summarization](https://arxiv.org/abs/1810.06667v1). arXiv:1810.06667, 2018.
+
 
 ### Chinese Text Summarization
 
