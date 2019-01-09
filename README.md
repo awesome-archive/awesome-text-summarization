@@ -141,9 +141,14 @@ in Chinese. It is written in Python.
 ### Sentence Representations
 
 1. Kalchbrenner, Nal, Edward Grefenstette, and Phil Blunsom. [A convolutional neural network for modelling sentences](http://arxiv.org/abs/1404.2188). arXiv:1404.2188, 2014.
-2. Quoc Le and Tomas Mikolov. [Distributed representations of sentences and documents](http://arxiv.org/abs/1405.4053). arXiv:1405.4053, 2014.
+2. Quoc Le and Tomas Mikolov. [Distributed representations of sentences and documents](https://arxiv.org/abs/1405.4053v2). arXiv:1405.4053v2, 2014.
+   * Distributed Memory Model of Paragraph Vectors (PV-DM): The inspiration is that the paragraph vectors are asked to contribute to the prediction task of the next word given many contexts sampled from the paragraph.  The paragraph vector and word vectors are averaged or concatenated to predict the next word in a context. The contexts are fixed-length and sampled from a sliding window over the paragraph. The paragraph vector is shared across all contexts generated from the same paragraph but not across paragraphs. However, the word vector matrix is shared across paragraphs. The downside is at prediction time, inference needs to be performed to compute a new vector.
+   * Distributed Bag of Words version of Paragraph Vector (PV-DBOW): This modle is to ignore the context words in the input, but force the model to predict words randomly sampled from the paragraph in the output.
 3. Yoon Kim. [Convolutional neural networks for sentence classification](http://arxiv.org/abs/1408.5882). arXiv:1408.5882, EMNLP 2014.
 1. Ryan Kiros, Yukun Zhu, Ruslan Salakhutdinov, Richard S. Zemel, Antonio Torralba, Raquel Urtasun and Sanja Fidler. [Skip-Thought Vectors](https://arxiv.org/abs/1506.06726). arXiv:1506.06726, 2015. The source code in Python is [skip-thoughts](https://github.com/ryankiros/skip-thoughts). The TensorFlow implementation of *Skip-Thought Vectors* is [skip_thoughts](https://github.com/tensorflow/models/tree/master/research/skip_thoughts)
+   * Instead of using a word to predict its surrounding context, they instead encode a sentence to predict the sentences around it. The skip-thoughts is in the framework of encoder-decoder models: an encoder maps words to a sentence vector and a decoder is used to generate the surrounding sentences.
+   * The end product of skip-thoughts is the encoder,  which can then be used to generate fixed length representations of sentences. The decoders are thrown away after training.
+   * A good tutorial to this paper is [My Thoughts On Skip Thoughts](http://sanyam5.github.io/my-thoughts-on-skip-thoughts/).
 2. John Wieting and Mohit Bansal and Kevin Gimpel and Karen Livescu. [Towards Universal Paraphrastic Sentence Embeddings](https://arxiv.org/abs/1511.08198). arXiv:1511.08198, ICLR 2016. The source code written in Python is [iclr2016](https://github.com/jwieting/iclr2016).
 2. Zhe Gan, Yunchen Pu, Ricardo Henao, Chunyuan Li, Xiaodong He, Lawrence Carin. [Learning Generic Sentence Representations Using Convolutional Neural Networks](https://arxiv.org/abs/1611.07897). arXiv:1611.07897, EMNLP 2017. The training code written in Python is [ConvSent](https://github.com/zhegan27/ConvSent).
 3. Matteo Pagliardini, Prakhar Gupta, Martin Jaggi. [Unsupervised Learning of Sentence Embeddings using Compositional n-Gram Features](https://arxiv.org/abs/1703.02507v2). arXiv:1703.02507, NAACL 2018. The source code in Python is [sent2vec](https://github.com/epfml/sent2vec). 
@@ -164,8 +169,9 @@ in Chinese. It is written in Python.
 
 #### Evaluation of Sentence Embeddings
 
-1. ossi Adi, Einat Kermany, Yonatan Belinkov, Ofer Lavi, Yoav Goldberg. [Fine-grained Analysis of Sentence Embeddings Using Auxiliary Prediction Tasks](https://arxiv.org/abs/1608.04207v3). arXiv:1608.04207v3, 2017.
-2. Alexis Conneau, Douwe Kiela. [SentEval: An Evaluation Toolkit for Universal Sentence Representations](https://arxiv.org/abs/1803.05449). arXiv:1803.05449, LREC 2018. The source code in Python is [SentEval](https://github.com/facebookresearch/SentEval).
+1. Yossi Adi, Einat Kermany, Yonatan Belinkov, Ofer Lavi, Yoav Goldberg. [Fine-grained Analysis of Sentence Embeddings Using Auxiliary Prediction Tasks](https://arxiv.org/abs/1608.04207v3). arXiv:1608.04207v3, 2017.
+   * They define prediction tasks around isolated aspects of sentence structure (namely sentence length, word content, and word order), and score representations by the ability to train a classifier to solve each prediction task when using the representation as input.
+2. Alexis Conneau, Douwe Kiela. [SentEval: An Evaluation Toolkit for Universal Sentence Representations](https://arxiv.org/abs/1803.05449). arXiv:1803.05449, LREC 2018. The source code in Python is [SentEval](https://github.com/facebookresearch/SentEval). **SentEval** encompasses a variety of tasks, including binary and multi-class classification, natural language inference and sentence similarity.
 3. Alex Wang, Amapreet Singh, Julian Michael, Felix Hill, Omer Levy, Samuel R. Bowman. [GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding](https://arxiv.org/abs/1804.07461). arXiv:1804.07461, 2018.
 4. Alexis Conneau, German Kruszewski, Guillaume Lample, Loïc Barrault, Marco Baroni. [What you can cram into a single vector: Probing sentence embeddings for linguistic properties](https://arxiv.org/abs/1805.01070v2). arXiv:1805.01070v2, 2018.
 
@@ -240,7 +246,7 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
    - They use sequence-to-sequence encoder-decoder LSTM with attention and bidirectional neural net.
    - They use the first 2 sentences of a document with a limit at 120 words.
    - The scores achieved by Google’s *textsum* are 42.57 ROUGE-1 and 23.13 ROUGE-2.
-3. Ramesh Nallapati, Bowen Zhou, Cicero Nogueira dos santos, Caglar Gulcehre, Bing Xiang. [Abstractive Text Summarization Using Sequence-to-Sequence RNNs and Beyond](https://arxiv.org/abs/1602.06023). arXiv:1602.06023, 2016.
+3. Ramesh Nallapati, Bowen Zhou, Cicero Nogueira dos santos, Caglar Gulcehre, Bing Xiang. [Abstractive Text Summarization Using Sequence-to-Sequence RNNs and Beyond](https://arxiv.org/abs/1602.06023). arXiv:1602.06023, 2016. The souce code written in Python is [Summarization](https://github.com/zwc12/Summarization) or [abstractive-text-summarization](https://github.com/alesee/abstractive-text-summarization).
    - They use GRU with attention and bidirectional neural net.
    - They use the first 2 sentences of a documnet with a limit at 120 words.
    - They use the [Large vocabulary trick (LVT)](https://arxiv.org/abs/1412.2007) of Jean et al. 2014, which means when you decode, use only the words that appear in the source - this reduces perplexity. But then you lose the capability to do "abstractive" summary. So they do "vocabulary expansion" by adding a layer of "word2vec nearest neighbors" to the words in the input.
@@ -275,7 +281,6 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 28. Jianmin Zhang, Jiwei Tan, Xiaojun Wan. [Towards a Neural Network Approach to Abstractive Multi-Document Summarization](https://arxiv.org/abs/1804.09010v1). arXiv:1804.09010, 2018.
 28. Shuming Ma, Xu Sun, Junyang Lin, Xuancheng Ren. [A Hierarchical End-to-End Model for Jointly Improving Text Summarization and Sentiment Classification](https://arxiv.org/abs/1805.01089v2). arXiv:1805.01089v2, IJCAI 2018.
 28. Li Wang, Junlin Yao, Yunzhe Tao, Li Zhong, Wei Liu, Qiang Du. [A Reinforced Topic-Aware Convolutional Sequence-to-Sequence Model for Abstractive Text Summarization](https://arxiv.org/abs/1805.03616). arXiv:1805.03616, International Joint Conference on Artificial Intelligence and European Conference on Artificial Intelligence (IJCAI-ECAI), 2018.
-29. Junyang Lin, Xu Sun, Shuming Ma, Qi Su. [Global Encoding for Abstractive Summarization](https://arxiv.org/abs/1805.03989v2). arXiv:1805.03989, ACL 2018.
 29. Guokan Shang, Wensi Ding, Zekun Zhang, Antoine J.-P. Tixier, Polykarpos Meladianos, Michalis Vazirgiannis, Jean-Pierre Lorre´. [Unsupervised Abstractive Meeting Summarization with Multi-Sentence Compression and Budgeted Submodular Maximization](https://arxiv.org/abs/1805.05271). arXiv:1805.05271, 2018.
 30. Fei Liu, Jeffrey Flanigan, Sam Thomson, Norman Sadeh, Noah A. Smith. [Toward Abstractive Summarization Using Semantic Representations](https://arxiv.org/abs/1805.10399v1). arXiv:1805.10399, 2018.
 30. Han Guo, Ramakanth Pasunuru, Mohit Bansal. [Soft Layer-Specific Multi-Task Summarization with Entailment and Question Generation](https://arxiv.org/abs/1805.11004v1). arXiv:1805.11004, ACL 2018.
@@ -350,12 +355,13 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 48. Pranay Mathur, Aman Gill and Aayush Yadav. [Text Summarization in Python: Extractive vs. Abstractive techniques revisited](https://rare-technologies.com/text-summarization-in-python-extractive-vs-abstractive-techniques-revisited/#text_summarization_in_python). 2017.
     - They compared modern extractive methods like LexRank, LSA, Luhn and Gensim’s existing TextRank summarization module on the [Opinosis dataset](http://kavita-ganesan.com/opinosis-opinion-dataset) of 51 (article, summary) pairs. They also had a try with an abstractive technique using Tensorflow’s algorithm [textsum](https://github.com/tensorflow/models/tree/master/textsum), but didn’t obtain good results due to its extremely high hardware demands (7000 GPU hours).
 49. Arman Cohan, Nazli Goharian. [Scientific Article Summarization Using Citation-Context and Article's Discourse Structure](https://arxiv.org/abs/1704.06619v1). arXiv:1704.06619, EMNLP, 2015.
+50. Shuming Ma, Xu Sun, Jingjing Xu, Houfeng Wang, Wenjie Li, Qi Su. [Improving Semantic Relevance for Sequence-to-Sequence Learning of Chinese Social Media Text Summarization](https://arxiv.org/abs/1706.02459). The source code written in Python is [SRB](https://github.com/lancopku/SRB).
 50. Arman Cohan, Nazli Goharian. [Scientific document summarization via citation contextualization and scientific discourse](https://arxiv.org/abs/1706.03449v1). arXiv:1706.03449, 2017.
 51. Michihiro Yasunaga, Rui Zhang, Kshitijh Meelu, Ayush Pareek, Krishnan Srinivasan, Dragomir Radev. [Graph-based Neural Multi-Document Summarization](https://arxiv.org/abs/1706.06681v3). arXiv:1706.06681, CoNLL, 2017.
 52. Abeed Sarker, Diego Molla, Cecile Paris. [Automated text summarisation and evidence-based medicine: A survey of two domains](https://arxiv.org/abs/1706.08162v1). arXiv:1706.08162, 2017.
 53. Mehdi Allahyari, Seyedamin Pouriyeh, Mehdi Assefi, Saeid Safaei, Elizabeth D. Trippe, Juan B. Gutierrez, Krys Kochut. [Text Summarization Techniques: A Brief Survey](https://arxiv.org/abs/1707.02268). arXiv:1707.02268, 2017.
 5. Demian Gholipour Ghalandari. [Revisiting the Centroid-based Method: A Strong Baseline for Multi-Document Summarization](https://arxiv.org/abs/1708.07690v1). arXiv:1708.07690, EMNLP, 2017.
-54. Shuming Ma, Xu Sun. [A Semantic Relevance Based Neural Network for Text Summarization and Text Simplification](https://arxiv.org/abs/1710.02318v1). arXiv:1710.02318, 2017.
+54. Shuming Ma, Xu Sun. [A Semantic Relevance Based Neural Network for Text Summarization and Text Simplification](https://arxiv.org/abs/1710.02318v1). arXiv:1710.02318, 2017. The source code written in Python is [SRB](https://github.com/lancopku/SRB).
 55. Kaustubh Mani, Ishan Verma, Lipika Dey. [Multi-Document Summarization using Distributed Bag-of-Words Model](https://arxiv.org/abs/1710.02745v1). arXiv:1710.02745, 2017.
 56. Liqun Shao, Hao Zhang, Ming Jia, Jie Wang. [Efficient and Effective Single-Document Summarizations and A Word-Embedding Measurement of Quality](https://arxiv.org/abs/1710.00284v1). arXiv:1710.00284, KDIR, 2017.
 57. Mohammad Ebrahim Khademi, Mohammad Fakhredanesh, Seyed Mojtaba Hoseini. [Conceptual Text Summarizer: A new model in continuous vector space](https://arxiv.org/abs/1710.10994v2). arXiv:1710.10994, 2017.
@@ -385,7 +391,10 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
    - The results show that the RNN with context outperforms RNN without context on both character and word based input.
    - Moreover, the performances of the character-based input outperform the word-based input.
 3. Bingzhen Wei, Xuancheng Ren, Xu Sun, Yi Zhang, Xiaoyan Cai, Qi Su. [Regularizing Output Distribution of Abstractive Chinese Social Media Text Summarization for Improved Semantic Consistency](https://arxiv.org/abs/1805.04033v1). arXiv:1805.04033, 2018.
-4. Shuming Ma, Xu Sun, Junyang Lin and Houfeng Wang. [Autoencoder as Assistant Supervisor: Improving Text Representation for Chinese Social Media Text Summarization](https://arxiv.org/abs/1805.04869v1). arXiv:1805.04869, 2018.
+4. [LancoSum](https://github.com/lancopku/LancoSum) provides a toolkit for abstractive summarization, which can achieve the SOTA performance.
+   * Shuming Ma, Xu Sun, Wei Li, Sujian Li, Wenjie Li, Xuancheng Ren. [Query and Output: Generating Words by Querying Distributed Word Representations for Paraphrase Generation](https://arxiv.org/abs/1803.01465v3). arXiv:1803.01465v3, NAACL HLT 2018.
+   * Junyang Lin, Xu Sun, Shuming Ma, Qi Su. [Global Encoding for Abstractive Summarization](https://arxiv.org/abs/1805.03989v2). arXiv:1805.03989v2, ACL 2018. The source code written in Python is [Global-Encoding](https://github.com/lancopku/Global-Encoding).
+   * Shuming Ma, Xu Sun, Junyang Lin and Houfeng Wang. [Autoencoder as Assistant Supervisor: Improving Text Representation for Chinese Social Media Text Summarization](https://arxiv.org/abs/1805.04869v1). arXiv:1805.04869, ACL 2018. The source code written in Python is [superAE](https://github.com/lancopku/superAE).
 
 ### Evaluation Metrics
 
