@@ -14,6 +14,9 @@ A curated list of resources dedicated to text summarization
   * [Evaluation of Word Embeddings for Chinese](#evaluation-of-word-embeddings-for-chinese)
 * [Sentence Representations](#sentence-representations)
   * [Evaluation of Sentence Embeddings](#evaluation-of-sentence-embeddings)
+  * [Cross-lingual Sentence Representations](#cross-lingual-sentence-representations)
+  * [Evaluation of Cross-lingual Sentence Representations](#evaluation-of-cross-lingual-sentence-representations)
+* [Language Representations](#language-representations)
 * [Extractive Text Summarization](#extractive-text-summarization)
 * [Abstractive Text Summarization](#abstractive-text-summarization)
 * [Text Summarization](#text-summarization)
@@ -109,7 +112,6 @@ in Chinese. It is written in Python.
 22. Alexis Conneau, Guillaume Lample, Marc'Aurelio Ranzato, Ludovic Denoyer and Herv{\'e} J{\'e}gou. [Word Translation Without Parallel Data](https://arxiv.org/abs/1710.04087). arXiv:1710.04087, 2017. The source code in Python is [MUSE](https://github.com/facebookresearch/MUSE), which is a library for multilingual unsupervised or supervised word embeddings.
 23. Gabriel Grand, Idan Asher Blank, Francisco Pereira, Evelina Fedorenko. [Semantic projection: recovering human knowledge of multiple, distinct object features from word embeddings](https://arxiv.org/abs/1802.01241v2). arXiv:1802.01241, 2018.
     * Could context-dependent relationships be recovered from word embeddings? To address this issue, they introduce a powerful, domain-general solution: "semantic projection" of word-vectors onto lines that represent various object features, like size (the line extending from the word "small" to "big"), intelligence (from "dumb" to "smart"), or danger (from "safe" to "dangerous").
-24. Matthew E. Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark, Kenton Lee, Luke Zettlemoyer. [Deep contextualized word representations](https://arxiv.org/abs/1802.05365). arXiv:1802.05365, NAACL 2018. The code is [ELMo](https://allennlp.org/elmo).
 25. Edouard Grave, Piotr Bojanowski, Prakhar Gupta, Armand Joulin, Tomas Mikolov. [Learning Word Vectors for 157 Languages](https://arxiv.org/abs/1802.06893v2). arXiv:1802.06893v2, Proceedings of LREC, 2018.
     * They describe how high quality word representations for 157 languages are trained. They used two sources of data to train these models: the free online encyclopedia Wikipedia and data from the common crawl project. Pre-trained word vectors for 157 languages are [available](https://fasttext.cc/docs/en/crawl-vectors.html).
 26. Douwe Kiela, Changhan Wang and Kyunghyun Cho. [Context-Attentive Embeddings for Improved Sentence Representations](https://arxiv.org/abs/1804.07983). arXiv:1804.07983, 2018. 
@@ -117,6 +119,7 @@ in Chinese. It is written in Python.
 27. Laura Wendlandt, Jonathan K. Kummerfeld, Rada Mihalcea. [Factors Influencing the Surprising Instability of Word Embeddings](https://arxiv.org/abs/1804.09692v1). arXiv:1804.09692, NAACL HLT 2018.
     * They provide empirical evidence for how various factors contribute to the stability of word embeddings, and analyze the effects of stability on downstream tasks.
 28. [magnitude](https://github.com/plasticityai/magnitude) is a feature-packed Python package and vector storage file format for utilizing vector embeddings in machine learning models in a fast, efficient, and simple manner.
+29. Jose Camacho-Collados, Mohammad Taher Pilehvar. [From Word to Sense Embeddings: A Survey on Vector Representations of Meaning](https://arxiv.org/abs/1805.04032v3). arXiv:1805.04032v3, 2018. 
 
 #### Word Representations for Chinese
 
@@ -130,6 +133,7 @@ in Chinese. It is written in Python.
 #### Evaluation of Word Embeddings
 
 1. Tobias Schnabel, Igor Labutov, David Mimno and Thorsten Joachims. [Evaluation methods for unsupervised word embeddings](https://www.cs.cornell.edu/~schnabts/downloads/schnabel2015embeddings.pdf). EMNLP, 2015. The slides are [here](https://www.cs.cornell.edu/~schnabts/downloads/slides/schnabel2015eval.pdf).
+2. Billy Chiu, Anna Korhonen and  Sampo Pyysalo. [Intrinsic Evaluation of Word Vectors Fails to Predict Extrinsic Performance](https://www.aclweb.org/anthology/W/W16/W16-2501.pdf). Proceedings of the 1st Workshop on Evaluating Vector-Space Rep- resentations for NLP, 2016.
 2. Stanisław Jastrzebski, Damian Leśniak, Wojciech Marian Czarnecki. [How to evaluate word embeddings? On importance of data efficiency and simple supervised tasks](https://arxiv.org/abs/1702.02170). arXiv:1702.02170, 2017. The source code in Python is [word-embeddings-benchmarks](https://github.com/kudkudak/word-embeddings-benchmarks).
 3. Amir Bakarov. [A Survey of Word Embeddings Evaluation Methods](https://arxiv.org/abs/1801.09536). arXiv:1801.09536, 2018.
 
@@ -137,6 +141,7 @@ in Chinese. It is written in Python.
 
 1. Shen Li, Zhe Zhao, Renfen Hu, Wensi Li, Tao Liu, Xiaoyong Du. [Analogical Reasoning on Chinese Morphological and Semantic Relations](https://arxiv.org/abs/1805.06504). arXiv:1805.06504, ACL, 2018. 
    * The project [Chinese-Word-Vectors](https://github.com/Embedding/Chinese-Word-Vectors) provides 100+ Chinese Word Embeddings trained with different representations (dense and sparse), context features (word, ngram, character, and more), and corpora. Moreover, it provides a Chinese analogical reasoning dataset CA8 and an evaluation toolkit for users to evaluate the quality of their word vectors.
+2. Yuanyuan Qiu, Hongzheng Li, Shen Li, Yingdi Jiang, Renfen Hu, Lijiao Yang. [Revisiting Correlations between Intrinsic and Extrinsic Evaluations of Word Embeddings](http://www.cips-cl.org/static/anthology/CCL-2018/CCL-18-086.pdf). Chinese Computational Linguistics and Natural Language Processing Based on Naturally Annotated Big Data, 2018.
 
 ### Sentence Representations
 
@@ -149,9 +154,13 @@ in Chinese. It is written in Python.
    * Instead of using a word to predict its surrounding context, they instead encode a sentence to predict the sentences around it. The skip-thoughts is in the framework of encoder-decoder models: an encoder maps words to a sentence vector and a decoder is used to generate the surrounding sentences.
    * The end product of skip-thoughts is the encoder,  which can then be used to generate fixed length representations of sentences. The decoders are thrown away after training.
    * A good tutorial to this paper is [My Thoughts On Skip Thoughts](http://sanyam5.github.io/my-thoughts-on-skip-thoughts/).
+2. Andrew M. Dai, Quoc V. Le. [Semi-supervised Sequence Learning](https://arxiv.org/abs/1511.01432). arXiv:1511.01432, 2015.
+   * They present two approaches that use unlabeled data to improve sequence learning with recurrent networks. The first approach is to predict what comes next in a sequence, which is a conventional language model in natural language processing. The second approach is to use a sequence autoencoder, which reads the input sequence into a vector and predicts the input sequence again. These two algorithms can be used as a "pretraining" step for a later supervised sequence learning algorithm.
+   * Their semi-supervised learning approach is related to Skip-Thought vectors with two differences. The first difference is that Skip-Thought is a harder objective, because it predicts adjacent sentences. The second is that Skip-Thought is a pure unsupervised learning algorithm, without fine-tuning.
 2. John Wieting and Mohit Bansal and Kevin Gimpel and Karen Livescu. [Towards Universal Paraphrastic Sentence Embeddings](https://arxiv.org/abs/1511.08198). arXiv:1511.08198, ICLR 2016. The source code written in Python is [iclr2016](https://github.com/jwieting/iclr2016).
 2. Zhe Gan, Yunchen Pu, Ricardo Henao, Chunyuan Li, Xiaodong He, Lawrence Carin. [Learning Generic Sentence Representations Using Convolutional Neural Networks](https://arxiv.org/abs/1611.07897). arXiv:1611.07897, EMNLP 2017. The training code written in Python is [ConvSent](https://github.com/zhegan27/ConvSent).
 3. Matteo Pagliardini, Prakhar Gupta, Martin Jaggi. [Unsupervised Learning of Sentence Embeddings using Compositional n-Gram Features](https://arxiv.org/abs/1703.02507v2). arXiv:1703.02507, NAACL 2018. The source code in Python is [sent2vec](https://github.com/epfml/sent2vec). 
+4. Zhouhan Lin, Minwei Feng, Cicero Nogueira dos Santos, Mo Yu, Bing Xiang, Bowen Zhou, Yoshua Bengio. [A Structured Self-attentive Sentence Embedding](https://arxiv.org/abs/1703.03130). arXiv:1703.03130, ICLR 2017.
 1. Ledell Wu, Adam Fisch, Sumit Chopra, Keith Adams, Antoine Bordes, Jason Weston. [StarSpace: Embed All The Things](https://arxiv.org/abs/1709.03856v5). arXiv:1709.03856v5, 2017. The source code in C++11 is [StarSpace](https://github.com/facebookresearch/Starspace/).
 2. Alexis Conneau, Douwe Kiela, Holger Schwenk, Loic Barrault, Antoine Bordes. [Supervised Learning of Universal Sentence Representations from Natural Language Inference Data](https://arxiv.org/abs/1705.02364v5). arXiv:1705.02364v5, EMNLP 2017. The source code in Python is [InferSent](https://github.com/facebookresearch/InferSent).
 3. Sanjeev Arora, Yingyu Liang, Tengyu Ma. [A Simple but Tough-to-Beat Baseline for Sentence Embeddings](https://openreview.net/pdf?id=SyK00v5xx). ICLR 2017. The source code written in Python is [SIF](https://github.com/PrincetonML/SIF). [SIF_mini_demo](https://github.com/PrincetonML/SIF_mini_demo) is a minimum example for the sentence embedding algorithm. [sentence2vec](https://github.com/peter3125/sentence2vec) is another implementation.
@@ -162,10 +171,6 @@ in Chinese. It is written in Python.
 3. Eric Zelikman. [Context is Everything: Finding Meaning Statistically in Semantic Spaces](https://arxiv.org/abs/1803.08493). arXiv:1803.08493, 2018.
 1. Daniel Cer, Yinfei Yang, Sheng-yi Kong, Nan Hua, Nicole Limtiaco, Rhomni St. John, Noah Constant, Mario Guajardo-Cespedes, Steve Yuan, Chris Tar, Yun-Hsuan Sung, Brian Strope, Ray Kurzweil. [Universal Sentence Encoder](https://arxiv.org/abs/1803.11175v2). arXiv:1803.11175v2, 2018.
 2. Sandeep Subramanian, Adam Trischler, Yoshua Bengio, Christopher J Pal. [Learning General Purpose Distributed Sentence Representations via Large Scale Multi-task Learning](https://arxiv.org/abs/1804.00079). arXiv:1804.00079, ICLR 2018.
-3. [LASER](https://github.com/facebookresearch/LASER) is a library to calculate multilingual sentence embeddings:
-   * Holger Schwenk and Matthijs Douze. [Learning Joint Multilingual Sentence Representations with Neural Machine Translation](https://aclanthology.info/papers/W17-2619/w17-2619). ACL workshop on Representation Learning for NLP, 2017.
-   * Holger Schwenk and Xian Li. [A Corpus for Multilingual Document Classification in Eight Languages](http://www.lrec-conf.org/proceedings/lrec2018/pdf/658.pdf).  LREC, 2018.
-   * Holger Schwenk. [Filtering and Mining Parallel Data in a Joint Multilingual Space](https://arxiv.org/abs/1805.09822). arXiv:1805.09822, ACL, 2018.
 
 #### Evaluation of Sentence Embeddings
 
@@ -174,6 +179,45 @@ in Chinese. It is written in Python.
 2. Alexis Conneau, Douwe Kiela. [SentEval: An Evaluation Toolkit for Universal Sentence Representations](https://arxiv.org/abs/1803.05449). arXiv:1803.05449, LREC 2018. The source code in Python is [SentEval](https://github.com/facebookresearch/SentEval). **SentEval** encompasses a variety of tasks, including binary and multi-class classification, natural language inference and sentence similarity.
 3. Alex Wang, Amapreet Singh, Julian Michael, Felix Hill, Omer Levy, Samuel R. Bowman. [GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding](https://arxiv.org/abs/1804.07461). arXiv:1804.07461, 2018.
 4. Alexis Conneau, German Kruszewski, Guillaume Lample, Loïc Barrault, Marco Baroni. [What you can cram into a single vector: Probing sentence embeddings for linguistic properties](https://arxiv.org/abs/1805.01070v2). arXiv:1805.01070v2, 2018.
+5. Christian S. Perone, Roberto Silveira, Thomas S. Paula. [Evaluation of sentence embeddings in downstream and linguistic probing tasks](https://arxiv.org/abs/1806.06259). arXiv:1806.06259, 2018.
+
+#### Cross-lingual Sentence Representations
+
+1. [LASER](https://github.com/facebookresearch/LASER) is a library to calculate multilingual sentence embeddings:
+   * Holger Schwenk and Matthijs Douze. [Learning Joint Multilingual Sentence Representations with Neural Machine Translation](https://aclanthology.info/papers/W17-2619/w17-2619). ACL workshop on Representation Learning for NLP, 2017.
+   * Holger Schwenk and Xian Li. [A Corpus for Multilingual Document Classification in Eight Languages](http://www.lrec-conf.org/proceedings/lrec2018/pdf/658.pdf).  LREC, 2018.
+   * Holger Schwenk. [Filtering and Mining Parallel Data in a Joint Multilingual Space](https://arxiv.org/abs/1805.09822). arXiv:1805.09822, ACL, 2018.
+   * Mikel Artetxe, Holger Schwenk. [Margin-based Parallel Corpus Mining with Multilingual Sentence Embeddings](https://arxiv.org/abs/1811.01136). arXiv:1811.01136, 2018.
+   * Mikel Artetxe, Holger Schwenk. [Massively Multilingual Sentence Embeddings for Zero-Shot Cross-Lingual Transfer and Beyond](https://arxiv.org/abs/1812.10464). arXiv:1812.10464, 2018.
+
+#### Evaluation of Cross-lingual Sentence Representations
+
+1. Alexis Conneau, Guillaume Lample, Ruty Rinott, Adina Williams, Samuel R. Bowman, Holger Schwenk, Veselin Stoyanov. [XNLI: Evaluating Cross-lingual Sentence Representations](https://arxiv.org/abs/1809.05053). arXiv:1809.05053, EMNLP 2018.
+
+
+### Language Representations
+
+1. Jeremy Howard, Sebastian Ruder. [Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/abs/1801.06146v5). arXiv:1801.06146v5, ACL 2018.
+   * To address the lack of labeled data and to make NLP classification easier and less time-consuming, the researchers suggest applying transfer learning to NLP problems. Thus, instead of training the model from scratch, you can use another model that has been trained to solve a similar problem as the basis, and then fine-tune the original model to solve your specific problem.
+   * This fine-tuning should take into account several important considerations: a) Different layers should be fine-tuned to different extents as they capture different kinds of information. b) Adapting model’s parameters to task-specific features will be more efficient if the learning rate is firstly linearly increased and then linearly decayed. c) Fine-tuning all layers at once is likely to result in catastrophic forgetting; thus, it would be better to gradually unfreeze the model starting from the last layer.
+   * ULMFiT consists of three stages: a) The LM is trained on a general-domain corpus to capture general features of the language in different layers. b) The full LM is fine-tuned on target task data using discriminative fine-tuning and slanted triangular learning rates to learn task-specific features. c) The classifier is fine-tuned on the target task using gradual unfreezing and STLR to preserve low-level representations and adapt high-level ones.
+2. Matthew E. Peters, Mark Neumann, Mohit Iyyer, Matt Gardner, Christopher Clark, Kenton Lee, Luke Zettlemoyer. [Deep contextualized word representations](https://arxiv.org/abs/1802.05365). arXiv:1802.05365, NAACL 2018. The source code is [ELMo](https://allennlp.org/elmo).
+   * To generate word embeddings as a weighted sum of the internal states of a deep bi-directional language model (biLM), pre-trained on a large text corpus.
+   * To include representations from all layers of a biLM as different layers represent different types of information.
+   * To base ELMo representations on characters so that the network can use morphological clues to “understand” out-of-vocabulary tokens unseen in training.
+3. Matthew E. Peters, Mark Neumann, Luke Zettlemoyer, Wen-tau Yih. [Dissecting Contextual Word Embeddings: Architecture and Representation](https://arxiv.org/abs/1808.08949v2). arXiv:1808.08949v2, EMNLP 2018.
+3. Alec Radford, Karthik Narasimhan, Tim Salimans, and Ilya Sutskever. [Improving Language Understanding by Generative Pre-Training](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf). Technical report, OpenAI, 2018. The source code written in Python is [finetune-transformer-lm](https://github.com/openai/finetune-transformer-lm).
+4. Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova. [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805). arXiv:1810.04805, 2018.
+   * TensorFlow code and pre-trained models for BERT are in [bert](https://github.com/google-research/bert).
+   *  PyTorch versions of BERT are [pytorch-pretrained-BERT](https://github.com/huggingface/pytorch-pretrained-BERT) and [BERT-pytorch](https://github.com/codertimo/BERT-pytorch).
+   *  Chainer implementation of BERT is [bert-chainer](https://github.com/soskek/bert-chainer).
+   *  Using BERT model as a sentence encoding service is implemented as [bert-as-service](https://github.com/hanxiao/bert-as-service).
+
+
+#### Cross-lingual Language Representations
+
+1. Guillaume Lample, Alexis Conneau. [Cross-lingual Language Model Pretraining](https://arxiv.org/abs/1901.07291). arXiv:1901.07291, 2019.
+
 
 ### Extractive Text Summarization
 
