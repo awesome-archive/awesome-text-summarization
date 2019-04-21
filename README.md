@@ -164,6 +164,8 @@ in Chinese. It is written in Python.
 1. Ledell Wu, Adam Fisch, Sumit Chopra, Keith Adams, Antoine Bordes, Jason Weston. [StarSpace: Embed All The Things](https://arxiv.org/abs/1709.03856v5). arXiv:1709.03856v5, 2017. The source code in C++11 is [StarSpace](https://github.com/facebookresearch/Starspace/).
 2. Alexis Conneau, Douwe Kiela, Holger Schwenk, Loic Barrault, Antoine Bordes. [Supervised Learning of Universal Sentence Representations from Natural Language Inference Data](https://arxiv.org/abs/1705.02364v5). arXiv:1705.02364v5, EMNLP 2017. The source code in Python is [InferSent](https://github.com/facebookresearch/InferSent).
 3. Sanjeev Arora, Yingyu Liang, Tengyu Ma. [A Simple but Tough-to-Beat Baseline for Sentence Embeddings](https://openreview.net/pdf?id=SyK00v5xx). ICLR 2017. The source code written in Python is [SIF](https://github.com/PrincetonML/SIF). [SIF_mini_demo](https://github.com/PrincetonML/SIF_mini_demo) is a minimum example for the sentence embedding algorithm. [sentence2vec](https://github.com/peter3125/sentence2vec) is another implementation.
+   * A weighted average of words by their distance from the first principal component of a sentence is proposed, which  yields a remarkably robust approximate sentence vector embedding.
+   * However, this “smooth inverse frequency” approach comes with limitations. Not only is calculating PCA for every sentence in a document computationally complex, but the first principal component of a small number of normally distributed words in a high dimensional space is subject to random fluctuation. Their calculation of word frequencies from the unigram count of the word in the corpus also means that their approach still does not work for out-of-vocab words, has no equivalent in other vector spaces and can’t be generated from the word vectors alone.
 1. Yixin Nie, Mohit Bansal. [Shortcut-Stacked Sentence Encoders for Multi-Domain Inference](https://arxiv.org/abs/1708.02312). arXiv:1708.02312, EMNLP 2017. The source code in Python is [multiNLI_encoder](https://github.com/easonnie/multiNLI_encoder). The new repo [ResEncoder]( https://github.com/easonnie/ResEncoder) is for Residual-connected sentence encoder for NLI.
 2. Allen Nie, Erin D. Bennett, Noah D. Goodman. [DisSent: Sentence Representation Learning from Explicit Discourse Relations](https://arxiv.org/abs/1710.04334v2). arXiv:1710.04334v2, 2018.
 3. Andreas Rücklé, Steffen Eger, Maxime Peyrard, Iryna Gurevych. [Concatenated Power Mean Word Embeddings as Universal Cross-Lingual Sentence Representations](https://arxiv.org/abs/1803.01400v2).  arXiv:1803.01400v2, 2018. The source code written in Python is [arxiv2018-xling-sentence-embeddings](https://github.com/UKPLab/arxiv2018-xling-sentence-embeddings).
@@ -189,6 +191,8 @@ in Chinese. It is written in Python.
    * Holger Schwenk. [Filtering and Mining Parallel Data in a Joint Multilingual Space](https://arxiv.org/abs/1805.09822). arXiv:1805.09822, ACL, 2018.
    * Mikel Artetxe, Holger Schwenk. [Margin-based Parallel Corpus Mining with Multilingual Sentence Embeddings](https://arxiv.org/abs/1811.01136). arXiv:1811.01136, 2018.
    * Mikel Artetxe, Holger Schwenk. [Massively Multilingual Sentence Embeddings for Zero-Shot Cross-Lingual Transfer and Beyond](https://arxiv.org/abs/1812.10464). arXiv:1812.10464, 2018.
+     - They learn a single, language agnostic BiLSTM shared encoder that can handle 93 different languages, which is coupled with an auxiliary decoder and trained over parallel corpora.
+
 
 #### Evaluation of Cross-lingual Sentence Representations
 
@@ -279,6 +283,8 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 28. Kristjan Arumae, Fei Liu. [Reinforced Extractive Summarization with Question-Focused Rewards](https://arxiv.org/abs/1805.10392v2). arXiv:1805.10392, 2018.
 28. Qingyu Zhou, Nan Yang, Furu Wei, Shaohan Huang, Ming Zhou, Tiejun Zhao. [Neural Document Summarization by Jointly Learning to Score and Select Sentences](https://arxiv.org/abs/1807.02305v1). arXiv:1807.02305, ACL 2018.
 28. Xingxing Zhang, Mirella Lapata, Furu Wei, Ming Zhou. [Neural Latent Extractive Document Summarization](https://arxiv.org/abs/1808.07187v2). arXiv:1808.07187, EMNLP 2018.
+29. Chandra Shekhar Yadav. [Automatic Text Document Summarization using Semantic-based Analysis](https://arxiv.org/abs/1811.06567v1). arXiv:1811.06567, 2018.
+30. Jiacheng Xu, Greg Durrett. [Neural Extractive Text Summarization with Syntactic Compression](https://arxiv.org/abs/1902.00863). arXiv:1902.00863v1, 2019.
 
 ### Abstractive Text Summarization
 
@@ -342,6 +348,10 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 31. Kamal Al-Sabahi, Zhang Zuping, Yang Kang. [Bidirectional Attentional Encoder-Decoder Model and Bidirectional Beam Search for Abstractive Summarization](https://arxiv.org/abs/1809.06662v1). arXiv:1809.06662, 2018.
 32. Tomonori Kodaira, Mamoru Komachi. [The Rule of Three: Abstractive Text Summarization in Three Bullet Points](https://arxiv.org/abs/1809.10867v1). arXiv:1809.10867, PACLIC 2018, 2018.
 32. Byeongchang Kim, Hyunwoo Kim, Gunhee Kim. [Abstractive Summarization of Reddit Posts with Multi-level Memory Networks](https://arxiv.org/abs/1811.00783). arXiv:1811.00783, 2018. The github project is  [MMN](https://github.com/ctr4si/MMN) including the dataset.
+33. Tian Shi, Yaser Keneshloo, Naren Ramakrishnan, Chandan K. Reddy. [Neural Abstractive Text Summarization with Sequence-to-Sequence Models](https://arxiv.org/abs/1812.02303v2). arXiv:1812.02303v2, 2018.
+34. Shen Gao, Xiuying Chen, Piji Li, Zhaochun Ren, Lidong Bing, Dongyan Zhao, Rui Yan. [Abstractive Text Summarization by Incorporating Reader Comments](https://arxiv.org/abs/1812.05407v1).  arXiv:1812.05407v1, AAAI 2019.
+35. Haoyu Zhang, Yeyun Gong, Yu Yan, Nan Duan, Jianjun Xu, Ji Wang, Ming Gong, Ming Zhou. [Pretraining-Based Natural Language Generation for Text Summarization](https://arxiv.org/abs/1902.09243v2). arXiv:1902.09243v2, 2019.
+36. Soheil Esmaeilzadeh, Gao Xian Peh, Angela Xu. [Neural Abstractive Text Summarization and Fake News Detection](https://arxiv.org/abs/1904.00788). arXiv:1904.00788v1, 2019.
 
 
 ### Text Summarization
@@ -423,6 +433,11 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 62. Parth Mehta, Prasenjit Majumder. [Exploiting local and global performance of candidate systems for aggregation of summarization techniques](https://arxiv.org/abs/1809.02343v1). arXiv:1809.02343, 2018.
 63. Chi Zhang, Shagan Sah, Thang Nguyen, Dheeraj Peri, Alexander Loui, Carl Salvaggio, Raymond Ptucha. [Semantic Sentence Embeddings for Paraphrasing and Text Summarization](https://arxiv.org/abs/1809.10267v1). arXiv:1809.10267, IEEE GlobalSIP 2017 Conference, 2018.
 64. Yaser Keneshloo, Naren Ramakrishnan, Chandan K. Reddy. [Deep Transfer Reinforcement Learning for Text Summarization](https://arxiv.org/abs/1810.06667v1). arXiv:1810.06667, 2018.
+65. Elvys Linhares Pontes, Stéphane Huet, Juan-Manuel Torres-Moreno. [A Multilingual Study of Compressive Cross-Language Text Summarization](https://arxiv.org/abs/1810.10639v1). 	arXiv:1810.10639, 2018.
+66. Patrick Fernandes, Miltiadis Allamanis, Marc Brockschmidt. [Structured Neural Summarization](https://arxiv.org/abs/1811.01824v2). arXiv:1811.01824v2, ICLR 2019.
+67. Hadrien Van Lierde, Tommy W. S. Chow. [Query-oriented text summarization based on hypergraph transversals](https://arxiv.org/abs/1902.00672). arXiv:1902.00672v1, 2019.
+65. Erion Çano, Ondřej Bojar. [Keyphrase Generation: A Text Summarization Struggle](https://arxiv.org/abs/1904.00110v2). arXiv:1904.00110v2, 2019.
+66. Abdelkrime Aries, Djamel eddine Zegour, Walid Khaled Hidouci. [Automatic text summarization: What has been done and what has to be done](https://arxiv.org/abs/1904.00688v1). arXiv:1904.00688v1, 2019.
 
 
 ### Chinese Text Summarization
