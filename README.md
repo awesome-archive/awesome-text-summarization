@@ -44,6 +44,7 @@ A curated list of resources dedicated to text summarization
 14. [sentence-compression](https://github.com/google-research-datasets/sentence-compression) is a large corpus of uncompressed and compressed sentences from news articles. The algorithm to collect the data is described here: [Overcoming the Lack of Parallel Data in Sentence Compression](http://www.aclweb.org/anthology/D/D13/D13-1155.pdf) by Katja Filippova and Yasemin Altun, EMNLP '13.
 15. [The Columbia Summarization Corpus (CSC)](https://www.cs.ucsb.edu/~william/papers/ijcnlp2011.pdf) was retrieved from the output of the [Newsblaster online news summarization system](http://newsblaster.cs.columbia.edu/) that crawls the Web for news articles, clusters them on specific topics and produces multidocument summaries for each cluster. They collected a total of 166,435 summaries containing 2.5 million sentences and covering 2,129 days in the 2003-2011 period. Additional references of the Columbia Newsblaster summarizer can be found on the website of [Columbia NLP group publication page](http://www1.cs.columbia.edu/nlp/papers.cgi).
 16. [WikiHow-Dataset](https://github.com/mahnazkoupaee/WikiHow-Dataset)  a new large-scale dataset using the online [WikiHow] (http://www.wikihow.com) knowledge base. Each article consists of multiple paragraphs and each paragraph starts with a sentence summarizing it. By merging the paragraphs to form the article and the paragraph outlines to form the summary, the resulting version of the dataset contains more than 200,000 long-sequence pairs.
+17. Guy Lev, Michal Shmueli-Scheuer, Jonathan Herzig, Achiya Jerbi, David Konopnicki. [TalkSumm: A Dataset and Scalable Annotation Method for Scientific Paper Summarization Based on Conference Talks](https://arxiv.org/abs/1906.01351v2). arXiv:1906.01351v2, ACL 2019.
 
 
 ### Text Summarization Software
@@ -216,6 +217,7 @@ in Chinese. It is written in Python.
    *  PyTorch versions of BERT are [pytorch-pretrained-BERT](https://github.com/huggingface/pytorch-pretrained-BERT) and [BERT-pytorch](https://github.com/codertimo/BERT-pytorch).
    *  Chainer implementation of BERT is [bert-chainer](https://github.com/soskek/bert-chainer).
    *  Using BERT model as a sentence encoding service is implemented as [bert-as-service](https://github.com/hanxiao/bert-as-service).
+5. Xiaodong Liu, Pengcheng He, Weizhu Chen, Jianfeng Gao. [Multi-Task Deep Neural Networks for Natural Language Understanding](https://arxiv.org/abs/1901.11504). arXiv:1901.11504, 2019. The PyTorch package implements this paper, named as [mt-dnn](https://github.com/namisan/mt-dnn).
 
 
 #### Cross-lingual Language Representations
@@ -283,8 +285,23 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 28. Kristjan Arumae, Fei Liu. [Reinforced Extractive Summarization with Question-Focused Rewards](https://arxiv.org/abs/1805.10392v2). arXiv:1805.10392, 2018.
 28. Qingyu Zhou, Nan Yang, Furu Wei, Shaohan Huang, Ming Zhou, Tiejun Zhao. [Neural Document Summarization by Jointly Learning to Score and Select Sentences](https://arxiv.org/abs/1807.02305v1). arXiv:1807.02305, ACL 2018.
 28. Xingxing Zhang, Mirella Lapata, Furu Wei, Ming Zhou. [Neural Latent Extractive Document Summarization](https://arxiv.org/abs/1808.07187v2). arXiv:1808.07187, EMNLP 2018.
+29. Yue Dong, Yikang Shen, Eric Crawford, Herke van Hoof, Jackie Chi Kit Cheung. [BanditSum: Extractive Summarization as a Contextual Bandit](https://arxiv.org/abs/1809.09672v3). arXiv:1809.09672v3, EMNLP 2018.
 29. Chandra Shekhar Yadav. [Automatic Text Document Summarization using Semantic-based Analysis](https://arxiv.org/abs/1811.06567v1). arXiv:1811.06567, 2018.
 30. Jiacheng Xu, Greg Durrett. [Neural Extractive Text Summarization with Syntactic Compression](https://arxiv.org/abs/1902.00863). arXiv:1902.00863v1, 2019.
+31. John Brandt. [Imbalanced multi-label classification using multi-task learning with extractive summarization](https://arxiv.org/abs/1903.06963v1). arXiv:1903.06963v1, 2019.
+31. Yang Liu. [Fine-tune BERT for Extractive Summarization](https://arxiv.org/abs/1903.10318v2). arXiv:1903.10318v2 , 2019. The source code is  [BertSum](https://github.com/nlpyang/BertSum).
+32. Kristjan Arumae, Fei Liu. [Guiding Extractive Summarization with Question-Answering Rewards](https://arxiv.org/abs/1904.02321v1). arXiv:1904.02321v1, NAACL 2019.
+32. Xingxing Zhang, Furu Wei, Ming Zhou. [HIBERT: Document Level Pre-training of Hierarchical Bidirectional Transformers for Document Summarization](https://arxiv.org/abs/1905.06566v1). arXiv:1905.06566v1, ACL 2019.
+32. Sangwoo Cho, Logan Lebanoff, Hassan Foroosh, Fei Liu. [Improving the Similarity Measure of Determinantal Point Processes for Extractive Multi-Document Summarization](https://arxiv.org/abs/1906.00072v1). arXiv:1906.00072v1, ACL 2019.
+33. Derek Miller. [Leveraging BERT for Extractive Text Summarization on Lectures](https://arxiv.org/abs/1906.04165v1). arXiv:1906.04165v1, 2019.
+34. Hong Wang, Xin Wang, Wenhan Xiong, Mo Yu, Xiaoxiao Guo, Shiyu Chang, William Yang Wang. [Self-Supervised Learning for Contextualized Extractive Summarization](https://arxiv.org/abs/1906.04466v1). arXiv:1906.04466v1, ACL 2019.
+35. Kai Wang, Xiaojun Quan, Rui Wang. [BiSET: Bi-directional Selective Encoding with Template for Abstractive Summarization](https://arxiv.org/abs/1906.05012v1). arXiv:1906.05012v1, 2019.
+36. Hadrien Van Lierde, Tommy W. S. Chow. [Learning with fuzzy hypergraphs: a topical approach to query-oriented text summarization](https://arxiv.org/abs/1906.09445v1). arXiv:1906.09445v1, 2019.
+37. Ming Zhong, Pengfei Liu, Danqing Wang, Xipeng Qiu, Xuanjing Huang. [Searching for Effective Neural Extractive Summarization: What Works and What's Next](https://arxiv.org/abs/1907.03491v1). arXiv:1907.03491v1, ACL 2019.
+32. Léo Bouscarrat, Antoine Bonnefoy, Thomas Peel, Cécile Pereira. [STRASS: A Light and Effective Method for Extractive Summarization Based on Sentence Embeddings](https://arxiv.org/abs/1907.07323v1). arXiv:1907.07323v1, 2019.
+33. Yuning Mao, Liyuan Liu, Qi Zhu, Xiang Ren, Jiawei Han. [Facet-Aware Evaluation for Extractive Text Summarization](https://arxiv.org/abs/1908.10383v1). arXiv:1908.10383v1, 2019.
+34. Danqing Wang, Pengfei Liu, Ming Zhong, Jie Fu, Xipeng Qiu, Xuanjing Huang. [Exploring Domain Shift in Extractive Text Summarization](https://arxiv.org/abs/1908.11664v1). arXiv:1908.11664v1, 2019.
+
 
 ### Abstractive Text Summarization
 
@@ -352,6 +369,23 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 34. Shen Gao, Xiuying Chen, Piji Li, Zhaochun Ren, Lidong Bing, Dongyan Zhao, Rui Yan. [Abstractive Text Summarization by Incorporating Reader Comments](https://arxiv.org/abs/1812.05407v1).  arXiv:1812.05407v1, AAAI 2019.
 35. Haoyu Zhang, Yeyun Gong, Yu Yan, Nan Duan, Jianjun Xu, Ji Wang, Ming Gong, Ming Zhou. [Pretraining-Based Natural Language Generation for Text Summarization](https://arxiv.org/abs/1902.09243v2). arXiv:1902.09243v2, 2019.
 36. Soheil Esmaeilzadeh, Gao Xian Peh, Angela Xu. [Neural Abstractive Text Summarization and Fake News Detection](https://arxiv.org/abs/1904.00788). arXiv:1904.00788v1, 2019.
+37. Sean MacAvaney, Sajad Sotudeh, Arman Cohan, Nazli Goharian, Ish Talati, Ross W. Filice. [Ontology-Aware Clinical Abstractive Summarization](https://arxiv.org/abs/1905.05818v1). arXiv:1905.05818v1, SIGIR 2019 Short Paper.
+38. Urvashi Khandelwal, Kevin Clark, Dan Jurafsky, Lukasz Kaiser. [Sample Efficient Text Summarization Using a Single Pre-Trained Transformer](https://arxiv.org/abs/1905.08836v1). arXiv:1905.08836v1, 2019.
+37. Logan Lebanoff, Kaiqiang Song, Franck Dernoncourt, Doo Soon Kim, Seokhwan Kim, Walter Chang, Fei Liu. [Scoring Sentence Singletons and Pairs for Abstractive Summarization](https://arxiv.org/abs/1906.00077v1). arXiv:1906.00077v1, ACL 2019.
+38. Andrew Hoang, Antoine Bosselut, Asli Celikyilmaz, Yejin Choi. [Efficient Adaptation of Pretrained Transformers for Abstractive Summarization](https://arxiv.org/abs/1906.00138v1). arXiv:1906.00138v1, 2019.
+39. Matan Eyal, Tal Baumel, Michael Elhadad. [Question Answering as an Automatic Evaluation Metric for News Article Summarization](https://arxiv.org/abs/1906.00318v1). arXiv:1906.00318v1, NAACL 2019.
+40. Laura Manor, Junyi Jessy Li. [Plain English Summarization of Contracts](https://arxiv.org/abs/1906.00424v1).  arXiv:1906.00424v1, 2019.
+41. Alexander R. Fabbri, Irene Li, Tianwei She, Suyi Li, Dragomir R. Radev. [Multi-News: a Large-Scale Multi-Document Summarization Dataset and Abstractive Hierarchical Model](https://arxiv.org/abs/1906.01749v3). arXiv:1906.01749v3, ACL 2019.
+41. Eva Sharma, Chen Li, Lu Wang. [BIGPATENT: A Large-Scale Dataset for Abstractive and Coherent Summarization](https://arxiv.org/abs/1906.03741v1). arXiv:1906.03741v1, ACL 2019.
+42. Masaru Isonuma, Junichiro Mori, Ichiro Sakata. [Unsupervised Neural Single-Document Summarization of Reviews via Learning Latent Discourse Structure and its Ranking](https://arxiv.org/abs/1906.05691v1). arXiv:1906.05691v1, ACL 2019.
+43. Joris Baan, Maartje ter Hoeve, Marlies van der Wees, Anne Schuth, Maarten de Rijke. [Do Transformer Attention Heads Provide Transparency in Abstractive Summarization?](https://arxiv.org/abs/1907.00570v2). arXiv:1907.00570v2, FACTS-IR 2019, SIGIR.
+43. Saadia Gabriel, Antoine Bosselut, Ari Holtzman, Kyle Lo, Asli Celikyilmaz, Yejin Choi. [Cooperative Generator-Discriminator Networks for Abstractive Summarization with Narrative Flow](https://arxiv.org/abs/1907.01272v1). arXiv:1907.01272v1, 2019.
+37. Shashi Narayan, Shay B. Cohen, Mirella Lapata. [What is this Article about? Extreme Summarization with Topic-aware Convolutional Neural Networks](https://arxiv.org/abs/1907.08722v1). arXiv:1907.08722v1, 2019.
+38. Nikola I. Nikolov, Richard H.R. Hahnloser. [Abstractive Document Summarization without Parallel Data](https://arxiv.org/abs/1907.12951v1).  arXiv:1907.12951v1, 2019.
+39. Melissa Ailem, Bowen Zhang, Fei Sha. [Topic Augmented Generator for Abstractive Summarization](https://arxiv.org/abs/1908.07026v1). arXiv:1908.07026v1, 2019.
+40. Siyao Li, Deren Lei, Pengda Qin, William Yang Wang. [Deep Reinforcement Learning with Distributional Semantic Rewards for Abstractive Summarization](https://arxiv.org/abs/1909.00141v1). arXiv:1909.00141v1, 2019.
+37. Eva Sharma, Luyang Huang, Zhe Hu, Lu Wang. [An Entity-Driven Framework for Abstractive Summarization](https://arxiv.org/abs/1909.02059v1). arXiv:1909.02059v1, 2019.
+37. Luke de Oliveira, Alfredo Láinez Rodrigo. [Repurposing Decoder-Transformer Language Models for Abstractive Summarization](https://arxiv.org/abs/1909.00325v1). arXiv:1909.00325v1, 2019.
 
 
 ### Text Summarization
@@ -436,9 +470,24 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 76. Yaser Keneshloo, Naren Ramakrishnan, Chandan K. Reddy. [Deep Transfer Reinforcement Learning for Text Summarization](https://arxiv.org/abs/1810.06667v1). arXiv:1810.06667, 2018.
 77. Elvys Linhares Pontes, Stéphane Huet, Juan-Manuel Torres-Moreno. [A Multilingual Study of Compressive Cross-Language Text Summarization](https://arxiv.org/abs/1810.10639v1). 	arXiv:1810.10639, 2018.
 78. Patrick Fernandes, Miltiadis Allamanis, Marc Brockschmidt. [Structured Neural Summarization](https://arxiv.org/abs/1811.01824v2). arXiv:1811.01824v2, ICLR 2019.
+79. Matthäus Kleindessner, Pranjal Awasthi, Jamie Morgenstern. [Fair k-Center Clustering for Data Summarization](https://arxiv.org/abs/1901.08628v2). arXiv:1901.08628v2, 2019.
 79. Hadrien Van Lierde, Tommy W. S. Chow. [Query-oriented text summarization based on hypergraph transversals](https://arxiv.org/abs/1902.00672). arXiv:1902.00672v1, 2019.
 80. Erion Çano, Ondřej Bojar. [Keyphrase Generation: A Text Summarization Struggle](https://arxiv.org/abs/1904.00110v2). arXiv:1904.00110v2, 2019.
 81. Abdelkrime Aries, Djamel eddine Zegour, Walid Khaled Hidouci. [Automatic text summarization: What has been done and what has to be done](https://arxiv.org/abs/1904.00688v1). arXiv:1904.00688v1, 2019.
+82. Nataliya Shakhovska, Taras Cherna. [The method of automatic summarization from different sources](https://arxiv.org/abs/1905.02623v1). arXiv:1905.02623v1, 2019.
+82. Alexios Gidiotis, Grigorios Tsoumakas. [Structured Summarization of Academic Publications](https://arxiv.org/abs/1905.07695v2). arXiv:1905.07695v2, 2019.
+82. Yang Liu, Mirella Lapata. [Hierarchical Transformers for Multi-Document Summarization](https://arxiv.org/abs/1905.13164v1). arXiv:1905.13164v1, ACL 2019.
+83. Hao Zheng, Mirella Lapata. [Sentence Centrality Revisited for Unsupervised Summarization](https://arxiv.org/abs/1906.03508v1). arXiv:1906.03508v1, ACL 2019.
+84. Jianying Lin, Rui Liu, Quanye Jia. [Joint Lifelong Topic Model and Manifold Ranking for Document Summarization](https://arxiv.org/abs/1907.03224v1). arXiv:1907.03224v1, 2019.
+82. Jiawei Zhou, Alexander M. Rush. [Simple Unsupervised Summarization by Contextual Matching](https://arxiv.org/abs/1907.13337v1). arXiv:1907.13337v1, 2019.
+82. Yang Liu, Mirella Lapata. [Text Summarization with Pretrained Encoders](https://arxiv.org/abs/1908.08345v2). arXiv:1908.08345v2, 2019. The source code is [PreSumm](https://github.com/nlpyang/PreSumm).
+83. Yacine Jernite. [Unsupervised Text Summarization via Mixed Model Back-Translation](https://arxiv.org/abs/1908.08566v1). arXiv:1908.08566v1, 2019.
+84. Varun Pandya. [Automatic Text Summarization of Legal Cases: A Hybrid Approach](https://arxiv.org/abs/1908.09119v1). arXiv:1908.09119v1, 2019.
+85. Shai Erera, Michal Shmueli-Scheuer, Guy Feigenblat, Ora Peled Nakash, Odellia Boni, Haggai Roitman, Doron Cohen, Bar Weiner, Yosi Mass, Or Rivlin, Guy Lev, Achiya Jerbi, Jonathan Herzig, Yufang Hou, Charles Jochim, Martin Gleize, Francesca Bonin, David Konopnicki. [A Summarization System for Scientific Documents](https://arxiv.org/abs/1908.11152v1). arXiv:1908.11152v1, 2019.
+86. Taehee Jung, Dongyeop Kang, Lucas Mentch, Eduard Hovy. [Earlier Isn't Always Better: Sub-aspect Analysis on Corpus and System Biases in Summarization](https://arxiv.org/abs/1908.11723v1). arXiv:1908.11723v1, EMNLP 2019.
+87. Junnan Zhu, Qian Wang, Yining Wang, Yu Zhou, Jiajun Zhang, Shaonan Wang, Chengqing Zong. [NCLS: Neural Cross-Lingual Summarization](https://arxiv.org/abs/1909.00156v1). arXiv:1909.00156v1, 2019.
+82. Michihiro Yasunaga, Jungo Kasai, Rui Zhang, Alexander R. Fabbri, Irene Li, Dan Friedman, Dragomir R. Radev. [ScisummNet: A Large Annotated Dataset and Content-Impact Models for Scientific Paper Summarization with Citation Networks](https://arxiv.org/abs/1909.01716v1). arXiv:1909.01716v1, 2019.
+82. Ruqian Lu, Shengluan Hou, Chuanqing Wang, Yu Huang, Chaoqun Fei, Songmao Zhang. [Attributed Rhetorical Structure Grammar for Domain Text Summarization](https://arxiv.org/abs/1909.00923v1). arXiv:1909.00923v1, 2019.
 
 
 ### Chinese Text Summarization
@@ -463,8 +512,12 @@ Co-Occurrence Statistics](https://www.microsoft.com/en-us/research/wp-content/up
 2. Chin-Yew Lin. [Rouge: A package for automatic evaluation of summaries](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/was2004.pdf). Workshop on Text Summarization Branches Out, Post-Conference Workshop of ACL 2004.
 3. Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu. [BLEU: a Method for Automatic Evaluation of Machine Translation](http://www.aclweb.org/anthology/P02-1040.pdf).
 4. Arman Cohan, Nazli Goharian. [Revisiting Summarization Evaluation for Scientific Articles](https://arxiv.org/abs/1604.00400v1). arXiv:1604.00400, LREC, 2016.
-5. Maxime Peyrard. [A Formal Definition of Importance for Summarization](https://arxiv.org/abs/1801.08991v1). arXiv:1801.08991, 2018.
+5. Maxime Peyrard. [A Simple Theoretical Model of Importance for Summarization](https://arxiv.org/abs/1801.08991v2). arXiv:1801.08991v2, ACL19 (outstanding paper award), 2019.
 6. Kavita Ganesan. [ROUGE 2.0: Updated and Improved Measures for Evaluation of Summarization Tasks](https://arxiv.org/abs/1803.01937v1). arXiv:1803.01937, 2018. It works by comparing an automatically produced summary or translation against a set of reference summaries (typically human-produced).  ROUGE is one of the standard ways to compute effectiveness of auto generated summaries. The evaluation toolkit [ROUGE 2.0](https://github.com/RxNLP/ROUGE-2.0) is an easy to use  for Automatic Summarization tasks. 
+7. Hardy, Shashi Narayan, Andreas Vlachos. [HighRES: Highlight-based Reference-less Evaluation of Summarization](https://arxiv.org/abs/1906.01361v1). arXiv:1906.01361v1, ACL 2019.
+7. Wojciech Kryściński, Nitish Shirish Keskar, Bryan McCann, Caiming Xiong, Richard Socher. [Neural Text Summarization: A Critical Evaluation](https://arxiv.org/abs/1908.08960v1). arXiv:1908.08960v1, 2019.
+7. Thomas Scialom, Sylvain Lamprier, Benjamin Piwowarski, Jacopo Staiano. [Answers Unite! Unsupervised Metrics for Reinforced Summarization Models](https://arxiv.org/abs/1909.01610v1). arXiv:1909.01610v1, 2019.
+
 
 ### Opinion Summarization
 
@@ -475,4 +528,5 @@ Co-Occurrence Statistics](https://www.microsoft.com/en-us/research/wp-content/up
 5. Ahmad Kamal. [Review Mining for Feature Based Opinion Summarization and Visualization](https://arxiv.org/abs/1504.03068v2). arXiv:1504.03068, 2015.
 6. Haibing Wu, Yiwei Gu, Shangdi Sun and Xiaodong Gu. [Aspect-based Opinion Summarization with Convolutional Neural Networks](https://arxiv.org/abs/1511.09128). 2015.
 7. Lu Wang, Hema Raghavan, Claire Cardie, Vittorio Castelli. [Query-Focused Opinion Summarization for User-Generated Content](https://arxiv.org/abs/1606.05702v1). arXiv:1606.05702, 2016.
+8. Reinald Kim Amplayo, Mirella Lapata. [Informative and Controllable Opinion Summarization](https://arxiv.org/abs/1909.02322v1). arXiv:1909.02322v1, 2019.
 
