@@ -21,6 +21,7 @@ A curated list of resources dedicated to text summarization
 * [Abstractive Text Summarization](#abstractive-text-summarization)
 * [Text Summarization](#text-summarization)
 * [Chinese Text Summarization](#chinese-text-summarization)
+* [Program Source Code Summarization](#program-source-code-summarization)
 * [Evaluation Metrics](#evaluation-metrics)
 * [Opinion Summarization](#opinion-summarization)
 
@@ -505,6 +506,12 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
    * Junyang Lin, Xu Sun, Shuming Ma, Qi Su. [Global Encoding for Abstractive Summarization](https://arxiv.org/abs/1805.03989v2). arXiv:1805.03989v2, ACL 2018. The source code written in Python is [Global-Encoding](https://github.com/lancopku/Global-Encoding).
    * Shuming Ma, Xu Sun, Junyang Lin and Houfeng Wang. [Autoencoder as Assistant Supervisor: Improving Text Representation for Chinese Social Media Text Summarization](https://arxiv.org/abs/1805.04869v1). arXiv:1805.04869, ACL 2018. The source code written in Python is [superAE](https://github.com/lancopku/superAE).
 
+### Program Source Code Summarization
+
+1. Najam Nazar, Yan Hu, and He Jiang.
+[Summarizing Software Artifacts: A Literature Review](http://oscar-lab.org/paper/jcst_16.pdf). Journal of Computer Science and Technology, 2016, 31, 883-909.
+     * This paper presents a literature review in the field of summarizing software artifacts, focusing on bug reports, source code, mailing lists and developer discussions artifacts.
+
 ### Evaluation Metrics
 
 1. Chin-Yew Lin and Eduard Hovy. [Automatic Evaluation of Summaries Using N-gram
@@ -529,4 +536,3 @@ Co-Occurrence Statistics](https://www.microsoft.com/en-us/research/wp-content/up
 6. Haibing Wu, Yiwei Gu, Shangdi Sun and Xiaodong Gu. [Aspect-based Opinion Summarization with Convolutional Neural Networks](https://arxiv.org/abs/1511.09128). 2015.
 7. Lu Wang, Hema Raghavan, Claire Cardie, Vittorio Castelli. [Query-Focused Opinion Summarization for User-Generated Content](https://arxiv.org/abs/1606.05702v1). arXiv:1606.05702, 2016.
 8. Reinald Kim Amplayo, Mirella Lapata. [Informative and Controllable Opinion Summarization](https://arxiv.org/abs/1909.02322v1). arXiv:1909.02322v1, 2019.
-
