@@ -58,6 +58,9 @@ in Chinese. It is written in Python.
 5. [PKUSUMSUM](https://github.com/PKULCWM/PKUSUMSUM) is an integrated toolkit for automatic document summarization. It supports single-document, multi-document and topic-focused multi-document summarizations, and a variety of summarization methods have been implemented in the toolkit. It supports Western languages (e.g. English) and Chinese language.
 6. [fnlp](https://github.com/FudanNLP/fnlp) is a toolkit for Chinese natural language processing.
 7. [fairseq](https://github.com/pytorch/fairseq) is a sequence modeling toolkit that allows researchers and developers to train custom models for translation, summarization, language modeling and other text generation tasks. It provides reference implementations of various sequence-to-sequence model.
+8. [paperswithcode](https://paperswithcode.com/area/natural-language-processing/text-summarization) a website that collects research
+papers in computer science with together with their code artifacts,
+this link is to so a section on natural language texts summarization.
 
 ### Word Representations
 
@@ -511,6 +514,10 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 1. Najam Nazar, Yan Hu, and He Jiang.
 [Summarizing Software Artifacts: A Literature Review](http://oscar-lab.org/paper/jcst_16.pdf). Journal of Computer Science and Technology, 2016, 31, 883-909.
      * This paper presents a literature review in the field of summarizing software artifacts, focusing on bug reports, source code, mailing lists and developer discussions artifacts.
+2. [paperswithcode](https://paperswithcode.com/task/code-summarization)
+a website that collects research
+papers in computer science with together with their code artifacts,
+this link is to so a section on source code summarization.
 
 ### Evaluation Metrics
 
