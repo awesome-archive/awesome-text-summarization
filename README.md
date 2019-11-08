@@ -518,6 +518,9 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
 a website that collects research
 papers in computer science with together with their code artifacts,
 this link is to so a section on source code summarization.
+3. Laura Moreno, Andrian Marcus.
+[Automatic Software Summarization: The State of the Art](https://dl.acm.org/citation.cfm?doid=3183440.3183464). (ICSE '18) Proceedings of the 40th International Conference on Software Engineering: Companion Proceeedings, pp. 530-531
+    * Another review paper, but much shorter.
 
 ### Evaluation Metrics
 
