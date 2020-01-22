@@ -21,6 +21,7 @@ A curated list of resources dedicated to text summarization
 * [Abstractive Text Summarization](#abstractive-text-summarization)
 * [Text Summarization](#text-summarization)
 * [Chinese Text Summarization](#chinese-text-summarization)
+* [Program Source Code Summarization](#program-source-code-summarization)
 * [Evaluation Metrics](#evaluation-metrics)
 * [Opinion Summarization](#opinion-summarization)
 
@@ -57,6 +58,9 @@ in Chinese. It is written in Python.
 5. [PKUSUMSUM](https://github.com/PKULCWM/PKUSUMSUM) is an integrated toolkit for automatic document summarization. It supports single-document, multi-document and topic-focused multi-document summarizations, and a variety of summarization methods have been implemented in the toolkit. It supports Western languages (e.g. English) and Chinese language.
 6. [fnlp](https://github.com/FudanNLP/fnlp) is a toolkit for Chinese natural language processing.
 7. [fairseq](https://github.com/pytorch/fairseq) is a sequence modeling toolkit that allows researchers and developers to train custom models for translation, summarization, language modeling and other text generation tasks. It provides reference implementations of various sequence-to-sequence model.
+8. [paperswithcode](https://paperswithcode.com/area/natural-language-processing/text-summarization) a website that collects research
+papers in computer science with together with their code artifacts,
+this link is to so a section on natural language texts summarization.
 
 ### Word Representations
 
@@ -519,6 +523,19 @@ Foundations and Trend in Information Retrieval, 2011. [The slides](https://www.f
    * Junyang Lin, Xu Sun, Shuming Ma, Qi Su. [Global Encoding for Abstractive Summarization](https://arxiv.org/abs/1805.03989v2). arXiv:1805.03989v2, ACL 2018. The source code written in Python is [Global-Encoding](https://github.com/lancopku/Global-Encoding).
    * Shuming Ma, Xu Sun, Junyang Lin and Houfeng Wang. [Autoencoder as Assistant Supervisor: Improving Text Representation for Chinese Social Media Text Summarization](https://arxiv.org/abs/1805.04869v1). arXiv:1805.04869, ACL 2018. The source code written in Python is [superAE](https://github.com/lancopku/superAE).
 
+### Program Source Code Summarization
+
+1. Najam Nazar, Yan Hu, and He Jiang.
+[Summarizing Software Artifacts: A Literature Review](http://oscar-lab.org/paper/jcst_16.pdf). Journal of Computer Science and Technology, 2016, 31, 883-909.
+     * This paper presents a literature review in the field of summarizing software artifacts, focusing on bug reports, source code, mailing lists and developer discussions artifacts.
+2. [paperswithcode](https://paperswithcode.com/task/code-summarization)
+a website that collects research
+papers in computer science with together with their code artifacts,
+this link is to so a section on source code summarization.
+3. Laura Moreno, Andrian Marcus.
+[Automatic Software Summarization: The State of the Art](https://dl.acm.org/citation.cfm?doid=3183440.3183464). (ICSE '18) Proceedings of the 40th International Conference on Software Engineering: Companion Proceeedings, pp. 530-531
+    * Another review paper, but much shorter.
+
 ### Evaluation Metrics
 
 1. Chin-Yew Lin and Eduard Hovy. [Automatic Evaluation of Summaries Using N-gram
@@ -545,4 +562,7 @@ Co-Occurrence Statistics](https://www.microsoft.com/en-us/research/wp-content/up
 6. Haibing Wu, Yiwei Gu, Shangdi Sun and Xiaodong Gu. [Aspect-based Opinion Summarization with Convolutional Neural Networks](https://arxiv.org/abs/1511.09128). 2015.
 7. Lu Wang, Hema Raghavan, Claire Cardie, Vittorio Castelli. [Query-Focused Opinion Summarization for User-Generated Content](https://arxiv.org/abs/1606.05702v1). arXiv:1606.05702, 2016.
 8. Reinald Kim Amplayo, Mirella Lapata. [Informative and Controllable Opinion Summarization](https://arxiv.org/abs/1909.02322v1). arXiv:1909.02322v1, 2019.
+<<<<<<< HEAD
 1. Arthur Bražinskas, Mirella Lapata, Ivan Titov. [Unsupervised Multi-Document Opinion Summarization as Copycat-Review Generation](https://arxiv.org/abs/1911.02247v1). arXiv:1911.02247v1, 2019.
+=======
+>>>>>>> a5094feb2d82009f5a48306e09d26cf2e894fbe4
