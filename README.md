@@ -562,7 +562,5 @@ Co-Occurrence Statistics](https://www.microsoft.com/en-us/research/wp-content/up
 6. Haibing Wu, Yiwei Gu, Shangdi Sun and Xiaodong Gu. [Aspect-based Opinion Summarization with Convolutional Neural Networks](https://arxiv.org/abs/1511.09128). 2015.
 7. Lu Wang, Hema Raghavan, Claire Cardie, Vittorio Castelli. [Query-Focused Opinion Summarization for User-Generated Content](https://arxiv.org/abs/1606.05702v1). arXiv:1606.05702, 2016.
 8. Reinald Kim Amplayo, Mirella Lapata. [Informative and Controllable Opinion Summarization](https://arxiv.org/abs/1909.02322v1). arXiv:1909.02322v1, 2019.
-<<<<<<< HEAD
 1. Arthur Bražinskas, Mirella Lapata, Ivan Titov. [Unsupervised Multi-Document Opinion Summarization as Copycat-Review Generation](https://arxiv.org/abs/1911.02247v1). arXiv:1911.02247v1, 2019.
-=======
->>>>>>> a5094feb2d82009f5a48306e09d26cf2e894fbe4
+
