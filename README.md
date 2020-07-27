@@ -61,6 +61,7 @@ in Chinese. It is written in Python.
 8. [paperswithcode](https://paperswithcode.com/area/natural-language-processing/text-summarization) a website that collects research
 papers in computer science with together with their code artifacts,
 this link is to so a section on natural language texts summarization.
+9. [CX_DB8](https://github.com/Hellisotherpeople/CX_DB8) a modern queryable summarizer utilizing the latest in pre-trained language models.
 
 ### Word Representations
 
@@ -178,6 +179,7 @@ this link is to so a section on natural language texts summarization.
 3. Eric Zelikman. [Context is Everything: Finding Meaning Statistically in Semantic Spaces](https://arxiv.org/abs/1803.08493). arXiv:1803.08493, 2018.
 1. Daniel Cer, Yinfei Yang, Sheng-yi Kong, Nan Hua, Nicole Limtiaco, Rhomni St. John, Noah Constant, Mario Guajardo-Cespedes, Steve Yuan, Chris Tar, Yun-Hsuan Sung, Brian Strope, Ray Kurzweil. [Universal Sentence Encoder](https://arxiv.org/abs/1803.11175v2). arXiv:1803.11175v2, 2018.
 2. Sandeep Subramanian, Adam Trischler, Yoshua Bengio, Christopher J Pal. [Learning General Purpose Distributed Sentence Representations via Large Scale Multi-task Learning](https://arxiv.org/abs/1804.00079). arXiv:1804.00079, ICLR 2018.
+3. Reimers, Nils and Gurevych, Iryna. [sentence-transformers](https://github.com/UKPLab/sentence-transformers)  - Sentence Transformers: Multilingual Sentence Embeddings using BERT / RoBERTa / XLM-RoBERTa & Co. with PyTorch
 
 #### Evaluation of Sentence Embeddings
 
