@@ -655,7 +655,7 @@ Co-Occurrence Statistics](https://www.microsoft.com/en-us/research/wp-content/up
 1. Esin Durmus, He He, Mona Diab. [FEQA: A Question Answering Evaluation Framework for Faithfulness Assessment in Abstractive Summarization](https://arxiv.org/abs/2005.03754v1). arXiv:2005.03754v1, ACL 2020.
 1. Forrest Sheng Bao, Hebi Li, Ge Luo, Cen Chen, Yinfei Yang, Minghui Qiu. [End-to-end Semantics-based Summary Quality Assessment for Single-document Summarization](https://arxiv.org/abs/2005.06377v1). arXiv:2005.06377v1, 2020.
 1. Daniel Deutsch, Dan Roth. [SacreROUGE: An Open-Source Library for Using and Developing Summarization Evaluation Metrics](https://arxiv.org/abs/2007.05374v1). arXiv:2007.05374v1, 2020.
-1. Alexander R. Fabbri, Wojciech Kryściński, Bryan McCann, Caiming Xiong, Richard Socher, Dragomir Radev. [SummEval: Re-evaluating Summarization Evaluation](https://arxiv.org/abs/2007.12626v3). arXiv:2007.12626v3, 2020.
+1. Alexander R. Fabbri, Wojciech Kryściński, Bryan McCann, Caiming Xiong, Richard Socher, Dragomir Radev. [SummEval: Re-evaluating Summarization Evaluation](https://arxiv.org/abs/2007.12626v3). arXiv:2007.12626v3, 2020. The source code is available [SummEval](https://github.com/Yale-LILY/SummEval).
 
 
 ### Opinion Summarization
